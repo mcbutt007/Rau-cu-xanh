@@ -4,4 +4,17 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_bookmarks">Bookmarks</string>
     <string name="title_about">About</string>
+    <string name="user_name">Hảo hán</string>
+    <string name="user_email">dacbubulmao@gmail.com</string>
+    <string name="thong_tin_cua_toi">Thông tin của tôi</string>
+    <string name="don_hang">Đơn hàng</string>
+    <string name="don_hang_sub">Xem lịch sử đơn hàng của bạn</string>
+    <string name="doi_thong_tin_ca_nhan">Đổi thông tin cá nhân</string>
+    <string name="doi_thong_tin_ca_nhan_sub">Thay đổi tên, số điện thoại, email,…</string>
+    <string name="thong_ke">Thống kê</string>
+    <string name="thong_ke_sub">Doanh thu của bạn trong tháng</string>
+    <string name="bao_mat">Bảo mật</string>
+    <string name="bao_mat_sub">Thay đổi mật khẩu</string>
+    <string name="dang_xuat">Đăng xuất</string>
+    <string name="dang_xuat_sub">Quay trở lại màn hình đăng nhập</string>
 </resources>

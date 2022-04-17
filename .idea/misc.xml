@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable-v24/user_avatar.xml" value="0.328" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.328" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/activity_main.xml" value="0.14954853273137697" />
-        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_about.xml" value="0.13802083333333334" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_about.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_bookmarks.xml" value="0.13802083333333334" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_dashboard.xml" value="0.2859375" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/list_about.xml" value="0.2052313883299799" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/test.xml" value="0.2859375" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/test2.xml" value="0.2859375" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/menu/about_menu.xml" value="0.4609375" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2859375" />
       </map>
     </option>
