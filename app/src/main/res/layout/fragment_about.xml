@@ -13,7 +13,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:text="@string/thong_tin_cua_toi"
+        android:text="@string/title_about"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceHeadline5"
         android:textSize="20sp" />
@@ -113,11 +113,15 @@
 
                     </LinearLayout>
 
-                    <ImageView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
                         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
                 </LinearLayout>
 
@@ -162,11 +166,15 @@
 
                     </LinearLayout>
 
-                    <ImageView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
                         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
                 </LinearLayout>
 
@@ -211,11 +219,15 @@
 
                     </LinearLayout>
 
-                    <ImageView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
                         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
                 </LinearLayout>
 
@@ -260,12 +272,17 @@
 
                     </LinearLayout>
 
-                    <ImageView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
                         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -310,12 +327,17 @@
 
                     </LinearLayout>
 
-                    <ImageView
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
                         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>

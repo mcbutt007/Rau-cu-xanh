@@ -1,6 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/anhdaidien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/avt" />
+
+    <TextView
+        android:id="@+id/Ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/anhdaidien"
+        android:layout_toRightOf="@+id/anhdaidien"
+        android:text="Thành"
+        android:textColor="#070505"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trang_chu"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="180dp"
+        android:layout_alignBottom="@+id/Ten"
+        android:text="Trang chủ"
+        android:textColor="#19C319"
+        />
+
+    <ImageView
+        android:id="@+id/giohang"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/giohang"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:ems="10"
+        android:hint="Bạn cần tìm gì?"
+        android:inputType="text" />
+
+    <SearchView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="80dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#489A4C"
+        android:text="Rau"
+        android:textSize="10sp"/>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#489A4C"
+        android:text="Củ"
+        android:textSize="10sp"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="104dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#489A4C"
+        android:text="Trái cây"
+        android:textSize="10sp"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#489A4C"
+        android:text="Gia vị"
+        android:textSize="10sp"/>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#489A4C"
+        android:textSize="10sp"
+        android:text="Khuyến mãi" />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#489A4C"
+        android:text="Trending"
+        android:textSize="10sp"/>
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="104dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#489A4C"
+        android:text="Đã mua"
+        android:textSize="10sp"/>
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#489A4C"
+        android:text="Sắp xếp"
+        android:textSize="9sp"
+        android:drawableRight="@drawable/sapxep"/>
+
+    <TextView
+        android:id="@+id/sanphamnoibat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="190dp"
+        android:text="Sản phẩm nổi bật trong ngày!!!"
+        android:textColor="#070707"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/namkimchi"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="230dp"
+        app:srcCompat="@drawable/nam" />
+
+
+    <TextView
+        android:id="@+id/tensanpham1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nấm kim chi"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="50dp"
+        />
+    <TextView
+        android:id="@+id/giasanpham1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50.000đ"
+        android:textColor="#D12121"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/ot"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="230dp"
+        app:srcCompat="@drawable/ot"/>
+    <TextView
+        android:id="@+id/tensanpham2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ớt"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="280dp"
+        />
+    <TextView
+        android:id="@+id/giasanpham2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60.000đ"
+        android:textColor="#D12121"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="280dp"
+        />
+    <ImageView
+        android:id="@+id/rau1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="380dp"
+        app:srcCompat="@drawable/rau1" />
+
+    <TextView
+        android:id="@+id/tensanpham3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nấm kim châm"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="480dp"
+        android:layout_marginStart="50dp"
+        />
+    <TextView
+        android:id="@+id/giasanpham3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="70.000đ"
+        android:textColor="#D12121"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="500dp"
+        android:layout_marginStart="50dp"
+        />
+    <ImageView
+        android:id="@+id/carot"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="530dp"
+        app:srcCompat="@drawable/carot" />
+
+    <TextView
+        android:id="@+id/tensanpham5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cà rốt"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="50dp"
+        />
+    <TextView
+        android:id="@+id/giasanpham5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40.000đ"
+        android:textColor="#D12121"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/khoqua"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="380dp"
+        app:srcCompat="@drawable/khoqua"/>
+    <TextView
+        android:id="@+id/tensanpham4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khổ qua"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="480dp"
+        android:layout_marginStart="280dp"
+        />
+    <TextView
+        android:id="@+id/giasanpham4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="55.000đ"
+        android:textColor="#D12121"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="500dp"
+        android:layout_marginStart="280dp"
+        />
+
+    <ImageView
+        android:id="@+id/namtaimeo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="530dp"
+        app:srcCompat="@drawable/namtaimeo"/>
+    <TextView
+        android:id="@+id/tensanpham6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nấm tai mèo"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="280dp"
+        />
+    <TextView
+        android:id="@+id/giasanpham6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="55.000đ"
+        android:textColor="#D12121"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="280dp"
+        />
+
+
+</RelativeLayout>

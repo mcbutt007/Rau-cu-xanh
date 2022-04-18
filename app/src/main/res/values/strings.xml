@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">Rau củ xanh</string>
-    <string name="title_home">Home</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_bookmarks">Bookmarks</string>
-    <string name="title_about">About</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_bookmarks">Yêu thích</string>
+    <string name="title_about">Thông tin của tôi</string>
     <string name="user_name">Hảo hán</string>
     <string name="user_email">dacbubulmao@gmail.com</string>
-    <string name="thong_tin_cua_toi">Thông tin của tôi</string>
     <string name="don_hang">Đơn hàng</string>
     <string name="don_hang_sub">Xem lịch sử đơn hàng của bạn</string>
     <string name="doi_thong_tin_ca_nhan">Đổi thông tin cá nhân</string>
@@ -17,4 +16,7 @@
     <string name="bao_mat_sub">Thay đổi mật khẩu</string>
     <string name="dang_xuat">Đăng xuất</string>
     <string name="dang_xuat_sub">Quay trở lại màn hình đăng nhập</string>
+    <string name="noti_new">NEW</string>
+    <string name="noti_sample_heading">Đơn đặt hàng số 123456789 của bạn đã được xác nhận</string>
+    <string name="noti_sample_sub">Đơn hàng của bạn sẽ được giao tới trong vòng 3-4 ngày tiếp theo.</string>
 </resources>
