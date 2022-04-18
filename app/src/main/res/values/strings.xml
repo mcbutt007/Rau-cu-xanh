@@ -19,4 +19,8 @@
     <string name="noti_new">NEW</string>
     <string name="noti_sample_heading">Đơn đặt hàng số 123456789 của bạn đã được xác nhận</string>
     <string name="noti_sample_sub">Đơn hàng của bạn sẽ được giao tới trong vòng 3-4 ngày tiếp theo.</string>
+    <string name="yeu_thich">Yêu thích</string>
+    <string name="ot_chuong_200g">Ớt chuông (200g)</string>
+    <string name="_10_000_vnd">10.000 VND</string>
+    <string name="ban_can_tim_gi">Bạn cần tìm gì?</string>
 </resources>

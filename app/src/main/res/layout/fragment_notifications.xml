@@ -32,7 +32,6 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification1"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -49,7 +48,8 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="start"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/notification_veggie_thumbnail" />
 
                     <LinearLayout
@@ -95,7 +95,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification2"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -112,7 +111,8 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="start"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/notification_veggie_thumbnail" />
 
                     <LinearLayout
@@ -157,7 +157,6 @@
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification3"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -174,7 +173,8 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="start"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/notification_veggie_thumbnail" />
 
                     <LinearLayout
@@ -219,7 +219,6 @@
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification4"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -236,7 +235,8 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="start"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/notification_veggie_thumbnail" />
 
                     <LinearLayout
@@ -281,7 +281,6 @@
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification5"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -298,7 +297,8 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="start"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/notification_veggie_thumbnail" />
 
                     <LinearLayout
@@ -343,7 +343,6 @@
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification6"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -360,7 +359,8 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="start"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/notification_veggie_thumbnail" />
 
                     <LinearLayout
@@ -404,193 +404,6 @@
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification7"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="start"
-                        android:src="@drawable/notification_veggie_thumbnail" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/noti_sample_heading"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/noti_sample_sub"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:text="@string/noti_new"
-                        android:textColor="@color/green_500"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification8"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="start"
-                        android:src="@drawable/notification_veggie_thumbnail" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/noti_sample_heading"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/noti_sample_sub"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:text="@string/noti_new"
-                        android:textColor="@color/green_500"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification9"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="start"
-                        android:src="@drawable/notification_veggie_thumbnail" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/noti_sample_heading"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/noti_sample_sub"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:text="@string/noti_new"
-                        android:textColor="@color/green_500"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

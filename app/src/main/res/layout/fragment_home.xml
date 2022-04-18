@@ -5,36 +5,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/trang_chu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Trang chủ"
+        android:textAlignment="center"
+        android:textColor="#19C319"
+        android:textSize="16sp" />
+
     <LinearLayout
         android:id="@+id/thanh_trang_chu"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/anhdaidien"
             android:layout_width="40dp"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_baseline_person_24" />
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            app:strokeWidth="1dp"
+            app:srcCompat="@drawable/user_avatar" />
 
         <TextView
             android:id="@+id/Ten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="10dp"
             android:text="Thành"
             android:textColor="#070505" />
 
-        <TextView
-            android:id="@+id/trang_chu"
+        <View
+            android:id="@+id/view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="Trang chủ"
-            android:textAlignment="center"
-            android:textColor="#19C319"
-            android:textSize="16sp" />
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/giohang"
@@ -45,34 +54,19 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/tim_kiem"
+    <SearchView
+        android:id="@+id/thanh_tim_kiem"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/thanh_trang_chu"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/thanh_tim_kiem"
-            >
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:hint="Bạn cần tìm gì?"
-                android:inputType="text" />
-        </SearchView>
-
-    </LinearLayout>
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/ban_can_tim_gi" />
 
     <LinearLayout
         android:id="@+id/button_line_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/tim_kiem"
+        android:layout_below="@id/thanh_tim_kiem"
         android:orientation="horizontal">
 
         <Button
@@ -180,19 +174,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/button_line_2"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:text="Sản phẩm nổi bật trong ngày!!!" />
+        android:layout_marginStart="10dp"
+        android:text="Sản phẩm nổi bật trong ngày!!!"
+        android:textAppearance="?attr/textAppearanceHeadline5" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="60dp"
         android:layout_below="@id/textView"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -219,21 +215,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/chilli_pepper" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Ớt"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="60.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -259,21 +256,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/nam" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mushroom" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Nấm"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="180.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -306,21 +304,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/chilli_pepper" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Ớt"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="60.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -346,21 +345,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/nam" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mushroom" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Nấm"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="180.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -392,21 +392,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/chilli_pepper" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Ớt"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="60.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -432,21 +433,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/nam" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mushroom" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Nấm"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="180.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -478,21 +480,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/chilli_pepper" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Ớt"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="60.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -518,21 +521,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/nam" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mushroom" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Nấm"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="180.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -564,21 +568,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/chilli_pepper" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Ớt"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="60.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -604,21 +609,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/nam" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mushroom" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Nấm"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="180.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -650,21 +656,22 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/chilli_pepper" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Ớt"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="60.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
@@ -690,21 +697,110 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/nam" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mushroom" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="Nấm"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="180.000 VND"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="#F44336" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/chilli_pepper" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Ớt"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="60.000 VND"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="#F44336" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mushroom" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Nấm"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="180.000 VND"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="#F44336" />
