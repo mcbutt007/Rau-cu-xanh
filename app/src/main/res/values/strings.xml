@@ -6,6 +6,8 @@
     <string name="title_about">Thông tin của tôi</string>
     <string name="user_name">Hảo hán</string>
     <string name="user_email">dacbubulmao@gmail.com</string>
+    <string name="user_phone_no">0987654321</string>
+    <string name="user_birth_date">12/03/2000</string>
     <string name="don_hang">Đơn hàng</string>
     <string name="don_hang_sub">Xem lịch sử đơn hàng của bạn</string>
     <string name="doi_thong_tin_ca_nhan">Đổi thông tin cá nhân</string>
@@ -18,9 +20,14 @@
     <string name="dang_xuat_sub">Quay trở lại màn hình đăng nhập</string>
     <string name="noti_new">NEW</string>
     <string name="noti_sample_heading">Đơn đặt hàng số 123456789 của bạn đã được xác nhận</string>
-    <string name="noti_sample_sub">Đơn hàng của bạn sẽ được giao tới trong vòng 3-4 ngày tiếp theo.</string>
+    <string name="noti_sample_sub">Đơn hàng của bạn sẽ được giao tới trong vòng 3–4 ngày tiếp theo.</string>
     <string name="yeu_thich">Yêu thích</string>
     <string name="ot_chuong_200g">Ớt chuông (200g)</string>
     <string name="_10_000_vnd">10.000 VND</string>
     <string name="ban_can_tim_gi">Bạn cần tìm gì?</string>
+    <string name="ho_ten">Họ Tên :</string>
+    <string name="email">Email :</string>
+    <string name="gioi_tinh">Giới tính :</string>
+    <string name="ngay_sinh">Ngày sinh :</string>
+    <string name="cap_nhat">Cập nhật</string>
 </resources>
