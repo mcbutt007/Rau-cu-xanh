@@ -9,8 +9,10 @@ import android.widget.ListView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.example.finaltest.R
 import com.example.finaltest.databinding.FragmentAboutBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class AboutFragment : Fragment() {
 
@@ -31,6 +33,10 @@ class AboutFragment : Fragment() {
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        // enable bottom nav bar
+        val navBar: BottomNavigationView = requireActivity().findViewById(R.id.nav_view)
+        navBar.visibility = View.VISIBLE
+
         //val textView: TextView = binding.textAbout
         //aboutViewModel.text.observe(viewLifecycleOwner) {
         //    textView.text = it
@@ -44,6 +50,10 @@ class AboutFragment : Fragment() {
         //val adapter = ArrayAdapter.createFromResource(requireActivity(),R.array.about_card_heading,android.R.layout.two_line_list_item)
         //4. Đưa Data source vào ListView
         //aboutList.adapter = adapter
+        binding.doiThongTin.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_thongTinCuaToiFragment))
+        binding.baoMat.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_changePasswordFragment))
 
         return root
     }
