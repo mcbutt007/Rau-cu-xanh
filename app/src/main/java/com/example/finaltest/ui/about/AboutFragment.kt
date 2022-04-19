@@ -55,6 +55,7 @@ class AboutFragment : Fragment() {
         binding.baoMat.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_changePasswordFragment))
 
+
         return root
     }
 

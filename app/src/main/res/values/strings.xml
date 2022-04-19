@@ -4,6 +4,8 @@
     <string name="title_notifications">Thông báo</string>
     <string name="title_bookmarks">Yêu thích</string>
     <string name="title_about">Thông tin của tôi</string>
+    <string name="title_change_password">Đổi mật khẩu mới</string>
+    <string name="title_thong_tin_ca_nhan">Thông tin cá nhân</string>
     <string name="user_name">Hảo hán</string>
     <string name="user_email">dacbubulmao@gmail.com</string>
     <string name="user_phone_no">0987654321</string>
