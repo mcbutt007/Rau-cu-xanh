@@ -50,10 +50,14 @@ class AboutFragment : Fragment() {
         //val adapter = ArrayAdapter.createFromResource(requireActivity(),R.array.about_card_heading,android.R.layout.two_line_list_item)
         //4. Đưa Data source vào ListView
         //aboutList.adapter = adapter
+
+        //Di chuyển đến
         binding.doiThongTin.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_thongTinCuaToiFragment))
         binding.baoMat.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_changePasswordFragment))
+        binding.thongKe.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_chiTieuThangFragment))
 
 
         return root

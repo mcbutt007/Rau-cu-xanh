@@ -166,7 +166,7 @@
             android:layout_weight="1"
             android:backgroundTint="#489A4C"
             android:drawableEnd="@drawable/ic_baseline_filter_list_24"
-            android:text="Xắp xếp"
+            android:text="Lọc"
             android:textSize="11sp" />
     </LinearLayout>
 

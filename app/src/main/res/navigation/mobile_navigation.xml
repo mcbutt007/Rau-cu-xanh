@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_navigation_about_to_changePasswordFragment"
             app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_navigation_about_to_chiTieuThangFragment"
+            app:destination="@id/chiTieuThangFragment" />
     </fragment>
     <fragment
         android:id="@+id/thongTinCuaToiFragment"
@@ -49,6 +52,14 @@
         android:label="ChangePasswordFragment" >
         <action
             android:id="@+id/action_changePasswordFragment_to_navigation_about"
+            app:destination="@id/navigation_about" />
+    </fragment>
+    <fragment
+        android:id="@+id/chiTieuThangFragment"
+        android:name="com.example.finaltest.ui.about.chi_tieu_thang.ChiTieuThangFragment"
+        android:label="ChiTieuThangFragment" >
+        <action
+            android:id="@+id/action_chiTieuThangFragment_to_navigation_about"
             app:destination="@id/navigation_about" />
     </fragment>
 </navigation>
