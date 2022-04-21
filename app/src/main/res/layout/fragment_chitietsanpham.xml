@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/return_to_about_title"/>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chilli_pepper" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Ớt(500g)"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="60.000Đ"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="#BA0F0F"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#4CAF50"
+            android:text="Giỏ hàng" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:text="Mua ngay" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_marginTop="10dp"
+            android:textColor="#111"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thông tin sản phẩm" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="        Với vị cay nồng, thơm, kích thích vị giác của người ăn, ớt là một trong những gia vị không thể thiếu trong nấu ăn cũng như mâm cơm của người Việt. Ớt hiểm của Bách Hóa Xanh luôn giữ được độ tươi mỗi ngày, được nuôi trồng theo quy trình nghiêm ngặt, bảo đảm các chỉ tiêu về an toàn và chất lượng." />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đánh giá sản phẩm"
+        android:textSize="20dp"
+        android:textColor="#111"
+        android:layout_marginTop="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/danh_gia_san_pham"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rate2" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bình luận"
+        android:textSize="20dp"
+        android:textColor="#111"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView262"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Thanh Thúy:"
+        android:textSize="15dp"
+        android:textColor="#4CAF50"/>
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="#0A0B0A"
+        android:text="   Ớt hiểm rất tươi ngon ,cay nồng, giá rẻ, giao hàng nhanh ,mọi người nên mua, đánh giá 5 sao, sẽ tiếp tục mua lần sau." />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView31"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Thanh Thúy1:"
+        android:textSize="15dp"
+        android:textColor="#4CAF50"/>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="#0A0B0A"
+        android:text="   Ớt hiểm rất tươi ngon ,cay nồng, giá rẻ, giao hàng nhanh ,mọi người nên mua, đánh giá 5 sao, sẽ tiếp tục mua lần sau." />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView36"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Thanh Thúy3:"
+        android:textSize="15dp"
+        android:textColor="#4CAF50"/>
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="#0A0B0A"
+        android:text="   Ớt hiểm rất tươi ngon ,cay nồng, giá rẻ, giao hàng nhanh ,mọi người nên mua, đánh giá 5 sao, sẽ tiếp tục mua lần sau." />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView29"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Thanh Thúy4:"
+        android:textSize="15dp"
+        android:textColor="#4CAF50"/>
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="#0A0B0A"
+        android:text="   Ớt hiểm rất tươi ngon ,cay nồng, giá rẻ, giao hàng nhanh ,mọi người nên mua, đánh giá 5 sao, sẽ tiếp tục mua lần sau." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#4CAF50"
+            android:text="Yêu thích" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Xem chi tiết >>"
+            android:backgroundTint="#FF5722"/>
+    </LinearLayout>
+
+</LinearLayout>

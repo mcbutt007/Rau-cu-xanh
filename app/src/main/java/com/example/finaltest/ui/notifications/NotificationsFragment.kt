@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.finaltest.R
 import com.example.finaltest.databinding.FragmentNotificationsBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NotificationsFragment : Fragment() {
 
@@ -32,6 +34,11 @@ class NotificationsFragment : Fragment() {
         //notificationsViewModel.text.observe(viewLifecycleOwner) {
         //    textView.text = it
         //}
+
+        val navBar: BottomNavigationView = requireActivity().findViewById(R.id.nav_view)
+        navBar.visibility = View.VISIBLE
+
+
         return root
     }
 

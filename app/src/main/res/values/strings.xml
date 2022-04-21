@@ -42,6 +42,12 @@
     <string name="rau_diep">Rau diếp</string>
     <string name="_60_000_vnd">60.000 VND</string>
     <string name="xac_nhan">Xác nhận</string>
+    <string name="title_chi_tiet_san_pham">Chi tiết sản phẩm</string>
+    <string name="title_thanh_toan">Thanh toán</string>
+    <string name="title_chi_tiet_hoa_don">Chi tiết hóa đơn</string>
+    <string name="title_don_hang">Đơn hàng</string>
+    <string name="title_khuyen_mai">Khuyến mãi</string>
+    <string name="title_review">Đánh giá</string>
     <string-array name="thang_thong_ke">
         <item>Tháng 12/2020</item>
         <item>Tháng 11/2020</item>

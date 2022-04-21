@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import com.example.finaltest.R
 import com.example.finaltest.databinding.FragmentHomeBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class HomeFragment : Fragment() {
 
@@ -32,6 +35,12 @@ class HomeFragment : Fragment() {
         //homeViewModel.text.observe(viewLifecycleOwner) {
         //    textView.text = it
         //}
+
+        binding.cardQuaOt.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_chiTietSanPhamFragment))
+
+        binding.buttonKhuyenMai.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_khuyenMaiFragment))
         return root
     }
 
