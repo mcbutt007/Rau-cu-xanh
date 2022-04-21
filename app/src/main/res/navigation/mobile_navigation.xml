@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_navigation_home_to_khuyenMaiFragment"
             app:destination="@id/khuyenMaiFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_cartFragment"
+            app:destination="@id/cartFragment" />
     </fragment>
 
     <fragment
@@ -82,6 +85,9 @@
         <action
             android:id="@+id/action_chiTietSanPhamFragment_to_reviewFragment"
             app:destination="@id/reviewFragment" />
+        <action
+            android:id="@+id/action_chiTietSanPhamFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
     </fragment>
     <fragment
         android:id="@+id/donHangFragment"
@@ -116,6 +122,22 @@
         android:label="ReviewFragment" >
         <action
             android:id="@+id/action_reviewFragment_to_chiTietSanPhamFragment"
+            app:destination="@id/chiTietSanPhamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.finaltest.ui.cart.CartFragment"
+        android:label="CartFragment" >
+        <action
+            android:id="@+id/action_cartFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.example.finaltest.ui.store.StoreFragment"
+        android:label="StoreFragment" >
+        <action
+            android:id="@+id/action_storeFragment_to_chiTietSanPhamFragment"
             app:destination="@id/chiTietSanPhamFragment" />
     </fragment>
 </navigation>

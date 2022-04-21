@@ -51,6 +51,14 @@
                     android:textColor="#BA0F0F"
                     android:textSize="11sp" />
 
+                <TextView
+                    android:id="@+id/cua_hang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="Rau củ xanh offical" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -214,6 +222,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Xem chi tiết >>"
+            android:layout_marginBottom="56dp"
             android:backgroundTint="#FF5722"/>
     </LinearLayout>
 

@@ -27,6 +27,8 @@ class ChiTietSanPhamFragment : Fragment() {
         danh_gia_san_pham.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietSanPhamFragment_to_reviewFragment))
         //Back button setup
         back_to_about.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietSanPhamFragment_to_navigation_home))
+
+        cua_hang.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietSanPhamFragment_to_storeFragment))
         //Title text
         title_about_to?.setText(R.string.title_chi_tiet_san_pham)
     }
