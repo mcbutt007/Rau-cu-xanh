@@ -1,13 +1,15 @@
 package com.nhom12.rau_cu_xanh
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.nhom12.rau_cu_xanh.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 

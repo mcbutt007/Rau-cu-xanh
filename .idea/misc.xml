@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable-v23/splash_background.xml" value="0.328" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable-v24/outline_password_20.xml" value="0.252" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable-v24/user_avatar.xml" value="0.328" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/bg_gradient.xml" value="0.328" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/circle_filled.xml" value="0.252" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.328" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/ic_baseline_pause_circle_filled_24.xml" value="0.252" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/ic_password_cursor.xml" value="0.252" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/rectangle.xml" value="0.328" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/splash_background.xml" value="0.328" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/drawable/splash_fg.xml" value="0.328" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/cart_main.xml" value="0.20175438596491227" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/chitetsanpham.xml" value="0.23471569046601112" />
@@ -32,6 +37,7 @@
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/return_chitietsanpham.xml" value="0.23471569046601112" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/return_to_about_title.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/review.xml" value="0.23471569046601112" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/splash_screen.xml" value="0.3783668234288157" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/store.xml" value="0.10400000000000001" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/test.xml" value="0.2859375" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/test2.xml" value="0.2859375" />
@@ -42,9 +48,6 @@
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.41354166666666664" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/baseline_3d_rotation_black_24dp.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
