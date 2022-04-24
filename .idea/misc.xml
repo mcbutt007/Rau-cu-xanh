@@ -20,7 +20,7 @@
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_chi_tieu_thang.xml" value="0.23471569046601112" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_chitietsanpham.xml" value="0.23471569046601112" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_dashboard.xml" value="0.2859375" />
-        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_notifications.xml" value="0.26416482707873434" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_review.xml" value="0.23471569046601112" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/layout/fragment_scrolling.xml" value="0.23471569046601112" />
@@ -41,6 +41,9 @@
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.252" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/baseline_3d_rotation_black_24dp.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

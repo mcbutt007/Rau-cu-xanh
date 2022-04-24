@@ -65,12 +65,14 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/ban_chay"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" >
+                android:outlineProvider="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -78,16 +80,16 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_gravity="center"
                         app:srcCompat="@drawable/ic_baseline_star_24" />
 
                     <TextView
-                        android:layout_gravity="center"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:text="@string/ban_chay" />
                 </LinearLayout>
 
@@ -95,12 +97,13 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/buttonKhuyenMai"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" >
+                android:outlineProvider="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -108,27 +111,30 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        app:srcCompat="@drawable/ic_baseline_star_24" />
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/baseline_sell_grey_500_24dp" />
 
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/title_khuyen_mai" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/trai_cay"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" >
+                android:outlineProvider="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -136,27 +142,60 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        app:srcCompat="@drawable/ic_baseline_star_24" />
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/banana" />
 
                     <TextView
-                        android:layout_gravity="center"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ban_chay" />
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/trai_cay" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rau"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:outlineProvider="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/rau" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:id="@+id/gia_vi"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" >
+                android:outlineProvider="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -164,27 +203,30 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_gravity="center"
                         app:srcCompat="@drawable/ic_baseline_star_24" />
 
                     <TextView
-                        android:layout_gravity="center"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ban_chay" />
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/gia_vi" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/cu"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" >
+                android:outlineProvider="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -192,73 +234,17 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_gravity="center"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_gravity="center"
                         app:srcCompat="@drawable/ic_baseline_star_24" />
 
                     <TextView
-                        android:layout_gravity="center"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ban_chay" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        app:srcCompat="@drawable/ic_baseline_star_24" />
-
-                    <TextView
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ban_chay" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        app:srcCompat="@drawable/ic_baseline_star_24" />
-
-                    <TextView
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ban_chay" />
+                        android:text="@string/cu" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

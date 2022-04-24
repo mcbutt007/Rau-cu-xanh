@@ -51,6 +51,10 @@
     <string name="rau_cu">Rau củ</string>
     <string name="XANH">XANH</string>
     <string name="ban_chay">Bán chạy</string>
+    <string name="rau">Rau</string>
+    <string name="cu">Củ</string>
+    <string name="trai_cay">Trái cây</string>
+    <string name="gia_vi">Gia vị</string>
     <string-array name="thang_thong_ke">
         <item>Tháng 12/2020</item>
         <item>Tháng 11/2020</item>
