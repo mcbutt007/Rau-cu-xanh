@@ -57,6 +57,12 @@
     <string name="gia_vi">Gia vị</string>
     <string name="vietgap">VietGAP</string>
     <string name="san_pham_noi_bat">Sản phẩm nổi bật trong ngày</string>
+    <string name="user_name_login">Tên người dùng</string>
+    <string name="password_login">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="forget_password">Quên mật khẩu?</string>
+    <string name="chua_co_tai_khoan">Chưa có tài khoản?</string>
+    <string name="tao_tai_khoan_moi">Tạo tài khoản mới</string>
     <string-array name="thang_thong_ke">
         <item>Tháng 12/2020</item>
         <item>Tháng 11/2020</item>
