@@ -51,210 +51,14 @@
             app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
 
     </LinearLayout>
-
-    <HorizontalScrollView
-        android:scrollbars="none"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ban_chay"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:outlineProvider="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_baseline_star_24" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/ban_chay" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/buttonKhuyenMai"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:outlineProvider="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/baseline_sell_grey_500_24dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="32dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/title_khuyen_mai" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/trai_cay"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:outlineProvider="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/banana" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/trai_cay" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/rau"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:outlineProvider="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/leaf" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/rau" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/gia_vi"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:outlineProvider="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_baseline_star_24" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/gia_vi" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cu"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:outlineProvider="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_baseline_star_24" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/cu" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </HorizontalScrollView>
+        android:layout_height="1dp"
+        android:background="@color/light_grey"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="56dp">
 
         <LinearLayout
@@ -263,6 +67,265 @@
             android:layout_margin="5dp"
             android:orientation="vertical"
             android:paddingBottom="0dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ban_chay"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:outlineProvider="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@color/light_grey"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                app:srcCompat="@drawable/baseline_star_black_24dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/ban_chay" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/buttonKhuyenMai"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:outlineProvider="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@color/light_grey"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                app:srcCompat="@drawable/baseline_sell_black_24dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/title_khuyen_mai" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/trai_cay"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:outlineProvider="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@color/light_grey"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                app:srcCompat="@drawable/banana2" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/trai_cay" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/rau"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:outlineProvider="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@color/light_grey"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                app:srcCompat="@drawable/leaf" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/rau" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/gia_vi"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:outlineProvider="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@color/light_grey"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                app:srcCompat="@drawable/giavi" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/gia_vi" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cu"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:outlineProvider="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@color/light_grey"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                app:srcCompat="@drawable/potato2" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/cu" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vietgap"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:outlineProvider="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@color/light_grey"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                app:srcCompat="@drawable/vietgap" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/vietgap" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/light_grey"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/san_pham_noi_bat"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -291,9 +354,9 @@
                             android:id="@+id/cardQuaOt"
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper" />
+                            android:src="@drawable/chilli_pepper"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -317,9 +380,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:checkable="true"
                     android:clickable="true"
@@ -333,9 +396,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom" />
+                            android:src="@drawable/mushroom"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -383,9 +446,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper" />
+                            android:src="@drawable/chilli_pepper"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -409,9 +472,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:checkable="true"
                     android:clickable="true"
@@ -425,9 +488,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom" />
+                            android:src="@drawable/mushroom"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -448,6 +511,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
@@ -474,9 +538,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper" />
+                            android:src="@drawable/chilli_pepper"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -500,9 +564,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:checkable="true"
                     android:clickable="true"
@@ -516,9 +580,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom" />
+                            android:src="@drawable/mushroom"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -539,6 +603,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
@@ -565,9 +630,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper" />
+                            android:src="@drawable/chilli_pepper"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -591,9 +656,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:checkable="true"
                     android:clickable="true"
@@ -607,9 +672,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom" />
+                            android:src="@drawable/mushroom"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -630,6 +695,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
@@ -656,9 +722,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper" />
+                            android:src="@drawable/chilli_pepper"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -682,9 +748,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:checkable="true"
                     android:clickable="true"
@@ -698,9 +764,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom" />
+                            android:src="@drawable/mushroom"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -721,6 +787,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
@@ -747,9 +814,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper" />
+                            android:src="@drawable/chilli_pepper"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -773,9 +840,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:checkable="true"
                     android:clickable="true"
@@ -789,9 +856,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="240dp"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom" />
+                            android:src="@drawable/mushroom"
+                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -812,8 +879,8 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
+
         </LinearLayout>
-
     </ScrollView>
 
 
