@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_marginBottom="56dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/return_to_about_title"/>
@@ -103,6 +104,7 @@
 
         <TextView
             android:id="@+id/textView26"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="        Với vị cay nồng, thơm, kích thích vị giác của người ăn, ớt là một trong những gia vị không thể thiếu trong nấu ăn cũng như mâm cơm của người Việt. Ớt hiểm của Bách Hóa Xanh luôn giữ được độ tươi mỗi ngày, được nuôi trồng theo quy trình nghiêm ngặt, bảo đảm các chỉ tiêu về an toàn và chất lượng." />
@@ -222,7 +224,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Xem chi tiết >>"
-            android:layout_marginBottom="56dp"
             android:backgroundTint="#FF5722"/>
     </LinearLayout>
 
