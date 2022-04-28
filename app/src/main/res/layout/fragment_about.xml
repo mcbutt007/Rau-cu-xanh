@@ -21,7 +21,8 @@
     <LinearLayout
         android:id="@+id/user_basic_info"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:orientation="horizontal">
@@ -63,7 +64,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
+        android:layout_weight="4"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="56dp"
@@ -72,14 +74,14 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/don_hang"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:checkable="true"
             android:clickable="true"
             android:focusable="true">
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,14 +123,14 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/doi_thong_tin"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:checkable="true"
             android:clickable="true"
             android:focusable="true">
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -169,14 +171,14 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/thong_ke"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:checkable="true"
             android:clickable="true"
             android:focusable="true">
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -217,14 +219,14 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/bao_mat"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:checkable="true"
             android:clickable="true"
             android:focusable="true">
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -265,14 +267,14 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/dang_xuat"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:checkable="true"
             android:clickable="true"
             android:focusable="true">
 
             <LinearLayout
+                android:padding="10dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
