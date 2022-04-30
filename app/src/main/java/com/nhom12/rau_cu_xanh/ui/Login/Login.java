@@ -1,4 +1,4 @@
-package com.nhom12.rau_cu_xanh;
+package com.nhom12.rau_cu_xanh.ui.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,11 +6,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.window.SplashScreen;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.nhom12.rau_cu_xanh.MainActivity;
 import com.nhom12.rau_cu_xanh.R;
 
 import retrofit2.Call;
@@ -26,12 +26,13 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
         tv1 = findViewById(R.id.username);
         tv2 = findViewById(R.id.password);
         user = new User();
         getlist();
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.hide();
 
 

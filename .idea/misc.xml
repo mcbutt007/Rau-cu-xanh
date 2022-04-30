@@ -52,7 +52,11 @@
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2859375" />
         <entry key="..\:/AndroidStudioProjects/finaltest/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.252" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/activity_main.xml" value="0.19986449864498645" />
+        <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_about.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_chitietsanpham.xml" value="0.12398373983739837" />
+        <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_create_new_account.xml" value="0.3783668234288157" />
+        <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_forget_passowrd.xml" value="0.3783668234288157" />
+        <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_home.xml" value="0.3783668234288157" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/login.xml" value="0.12398373983739837" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.41354166666666664" />
       </map>
