@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.window.SplashScreen;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nhom12.rau_cu_xanh.R;
@@ -30,6 +31,8 @@ public class Login extends AppCompatActivity {
         tv2 = findViewById(R.id.password);
         user = new User();
         getlist();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
         switchToSecondActivity = findViewById(R.id.button_dang_nhap);
