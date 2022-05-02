@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.return_to_about_title.*
+import kotlinx.android.synthetic.main.return_to_title.*
 
 class StoreFragment : Fragment() {
     override fun onCreateView(

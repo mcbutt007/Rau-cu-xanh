@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
-import kotlinx.android.synthetic.main.return_to_about_title.*
+import kotlinx.android.synthetic.main.return_to_title.*
 
 class ReviewFragment : Fragment() {
     override fun onCreateView(

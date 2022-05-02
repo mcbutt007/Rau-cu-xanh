@@ -7,7 +7,7 @@
     android:layout_marginBottom="56dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include layout="@layout/return_to_about_title"/>
+    <include layout="@layout/return_to_title"/>
 
     <LinearLayout
         android:paddingTop="10dp"

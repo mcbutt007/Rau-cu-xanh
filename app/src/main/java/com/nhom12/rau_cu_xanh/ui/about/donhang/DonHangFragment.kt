@@ -9,7 +9,7 @@ import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.fragment_donhang.*
-import kotlinx.android.synthetic.main.return_to_about_title.*
+import kotlinx.android.synthetic.main.return_to_title.*
 
 class DonHangFragment :Fragment() {
     override fun onCreateView(

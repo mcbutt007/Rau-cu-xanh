@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import kotlinx.android.synthetic.main.fragment_chitietsanpham.*
-import kotlinx.android.synthetic.main.return_to_about_title.*
+import kotlinx.android.synthetic.main.return_to_title.*
 
 class ChiTietSanPhamFragment : Fragment() {
     override fun onCreateView(

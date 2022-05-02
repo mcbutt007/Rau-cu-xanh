@@ -57,7 +57,8 @@
         android:label="ThongTinCuaToiFragment" >
         <action
             android:id="@+id/action_thongTinCuaToiFragment_to_navigation_about"
-            app:destination="@id/navigation_about" />
+            app:destination="@id/navigation_about"
+            app:popUpTo="@id/navigation_about" />
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
@@ -65,7 +66,8 @@
         android:label="ChangePasswordFragment" >
         <action
             android:id="@+id/action_changePasswordFragment_to_navigation_about"
-            app:destination="@id/navigation_about" />
+            app:destination="@id/navigation_about"
+            app:popUpTo="@id/navigation_about" />
     </fragment>
     <fragment
         android:id="@+id/chiTieuThangFragment"
@@ -73,7 +75,8 @@
         android:label="ChiTieuThangFragment" >
         <action
             android:id="@+id/action_chiTieuThangFragment_to_navigation_about"
-            app:destination="@id/navigation_about" />
+            app:destination="@id/navigation_about"
+            app:popUpTo="@id/navigation_about" />
     </fragment>
     <fragment
         android:id="@+id/chiTietSanPhamFragment"
@@ -81,7 +84,8 @@
         android:label="ChiTietSanPhamFragment" >
         <action
             android:id="@+id/action_chiTietSanPhamFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home" />
         <action
             android:id="@+id/action_chiTietSanPhamFragment_to_reviewFragment"
             app:destination="@id/reviewFragment" />
@@ -95,7 +99,8 @@
         android:label="DonHangFragment" >
         <action
             android:id="@+id/action_donHangFragment_to_navigation_about"
-            app:destination="@id/navigation_about" />
+            app:destination="@id/navigation_about"
+            app:popUpTo="@id/navigation_about" />
         <action
             android:id="@+id/action_donHangFragment_to_chiTietHoaDonFragment"
             app:destination="@id/chiTietHoaDonFragment" />
@@ -114,7 +119,8 @@
         android:label="KhuyenMaiFragment" >
         <action
             android:id="@+id/action_khuyenMaiFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/reviewFragment"
@@ -130,7 +136,8 @@
         android:label="CartFragment" >
         <action
             android:id="@+id/action_cartFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/storeFragment"

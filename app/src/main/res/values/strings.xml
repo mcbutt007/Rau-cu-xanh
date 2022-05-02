@@ -63,6 +63,17 @@
     <string name="forget_password">Quên mật khẩu?</string>
     <string name="chua_co_tai_khoan">Chưa có tài khoản?</string>
     <string name="tao_tai_khoan_moi">Tạo tài khoản mới</string>
+    <string name="reset_password_info">Chúng tôi sẽ gửi đến email của bạn đường dẫn khôi phục mật khẩu</string>
+    <string name="lay_lai_mk">Lấy lại mật khẩu</string>
+    <string name="new_ten">Tên</string>
+    <string name="new_email">Email</string>
+    <string name="new_mat_khau">Mật khẩu</string>
+    <string name="agree_to_terms">Tôi đồng ý với điều khoản sử dụng</string>
+    <string name="quay_lai_dn">Quay lại đăng nhập</string>
+    <string name="kt_email_tk">Hãy kiểm tra email của bạn để xác mình tài khoản.</string>
+    <string name="kt_email_mk">Hãy kiểm tra email của bạn để đặt lại mật khẩu.</string>
+    <string name="dk_tk_tc">Đăng ký tài khoản thành công</string>
+    <string name="mail_mk_tc">Gửi mail khôi phục thành công</string>
     <string-array name="thang_thong_ke">
         <item>Tháng 12/2020</item>
         <item>Tháng 11/2020</item>

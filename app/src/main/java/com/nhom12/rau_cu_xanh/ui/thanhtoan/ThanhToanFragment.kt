@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.nhom12.rau_cu_xanh.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.return_to_about_title.*
+import kotlinx.android.synthetic.main.return_to_title.*
 
 class ThanhToanFragment : Fragment() {
     override fun onCreateView(
