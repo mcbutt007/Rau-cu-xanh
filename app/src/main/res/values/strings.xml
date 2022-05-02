@@ -74,6 +74,10 @@
     <string name="kt_email_mk">Hãy kiểm tra email của bạn để đặt lại mật khẩu.</string>
     <string name="dk_tk_tc">Đăng ký tài khoản thành công</string>
     <string name="mail_mk_tc">Gửi mail khôi phục thành công</string>
+    <string name="tuoi_ngon_mn">Tươi ngon mỗi ngày</string>
+    <string name="title_trai_cay">Trái cây</string>
+    <string name="title_login_fg_pwd">Quên mật khẩu</string>
+    <string name="title_tao_tk_moi">Tạo tài khoản mới</string>
     <string-array name="thang_thong_ke">
         <item>Tháng 12/2020</item>
         <item>Tháng 11/2020</item>

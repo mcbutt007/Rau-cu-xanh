@@ -1,4 +1,4 @@
-package com.nhom12.rau_cu_xanh.ui.Login;
+package com.nhom12.rau_cu_xanh.ui.login;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

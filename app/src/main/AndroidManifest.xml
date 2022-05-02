@@ -21,7 +21,7 @@
         </activity>
 
         <activity
-            android:name="com.nhom12.rau_cu_xanh.ui.Login.Login"
+            android:name="com.nhom12.rau_cu_xanh.LoginActivity"
             android:exported="true">
         </activity>
 

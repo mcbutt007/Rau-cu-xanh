@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nhom12.rau_cu_xanh.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_createNewAccountFragment"
+            app:destination="@id/createNewAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FPSuccess"
+        android:name="com.nhom12.rau_cu_xanh.ui.login.forgetpassword.FPSuccessFragment"
+        android:label="FPSuccess" >
+        <action
+            android:id="@+id/action_FPSuccess_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.nhom12.rau_cu_xanh.ui.login.forgetpassword.ForgetPasswordFragment"
+        android:label="ForgetPasswordFragment" >
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_FPSuccess"
+            app:destination="@id/FPSuccess" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewAccountFragment"
+        android:name="com.nhom12.rau_cu_xanh.ui.login.createnewaccount.CreateNewAccountFragment"
+        android:label="CreateNewAccountFragment" >
+        <action
+            android:id="@+id/action_createNewAccountFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_createNewAccountFragment_to_createNewAccountSuccessFragment"
+            app:destination="@id/createNewAccountSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewAccountSuccessFragment"
+        android:name="com.nhom12.rau_cu_xanh.ui.login.createnewaccount.CreateNewAccountSuccessFragment"
+        android:label="CreateNewAccountSuccessFragment" >
+        <action
+            android:id="@+id/action_createNewAccountSuccessFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+</navigation>

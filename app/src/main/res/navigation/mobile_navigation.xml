@@ -19,6 +19,10 @@
         <action
             android:id="@+id/action_navigation_home_to_cartFragment"
             app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_traiCayFragment"
+            app:destination="@id/traiCayFragment"
+            app:popUpTo="@id/navigation_home" />
     </fragment>
 
     <fragment
@@ -146,5 +150,13 @@
         <action
             android:id="@+id/action_storeFragment_to_chiTietSanPhamFragment"
             app:destination="@id/chiTietSanPhamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/traiCayFragment"
+        android:name="com.nhom12.rau_cu_xanh.ui.home.traicay.TraiCayFragment"
+        android:label="TraiCayFragment" >
+        <action
+            android:id="@+id/action_traiCayFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 </navigation>

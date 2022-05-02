@@ -1,4 +1,4 @@
-package com.nhom12.rau_cu_xanh.ui.Login;
+package com.nhom12.rau_cu_xanh.ui.login;
 
 public class User {
     public int getPage() {

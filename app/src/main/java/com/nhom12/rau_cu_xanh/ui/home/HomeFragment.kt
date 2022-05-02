@@ -41,6 +41,9 @@ class HomeFragment : Fragment() {
         binding.buttonKhuyenMai.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_khuyenMaiFragment))
 
+        binding.buttonTraiCay.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_traiCayFragment))
+
         binding.giohang.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_cartFragment))
         return root
