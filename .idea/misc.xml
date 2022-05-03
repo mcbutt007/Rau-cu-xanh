@@ -56,9 +56,11 @@
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/activity_main.xml" value="0.19986449864498645" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_about.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_change_password.xml" value="0.19837537409149208" />
+        <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_chitiethoadon.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_chitietsanpham.xml" value="0.12398373983739837" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_create_new_account.xml" value="0.14" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_create_new_account_success.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_donhang.xml" value="0.17" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_forget_passowrd.xml" value="0.3783668234288157" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_forget_password.xml" value="0.19837537409149208" />
         <entry key="..\:/AndroidStudioProjects/rau-cu-xanh/app/src/main/res/layout/fragment_forget_password_success.xml" value="0.14" />
