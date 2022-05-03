@@ -1,5 +1,6 @@
 package com.nhom12.rau_cu_xanh.ui.about
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import com.nhom12.rau_cu_xanh.databinding.FragmentAboutBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.nhom12.rau_cu_xanh.LoginActivity
 
 class AboutFragment : Fragment() {
 
@@ -57,7 +59,11 @@ class AboutFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_chiTieuThangFragment))
         binding.donHang.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_donHangFragment))
-
+        //Dang xuat
+        binding.dangXuat.setOnClickListener {
+            val intent = Intent(this@AboutFragment.requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         return root
     }
