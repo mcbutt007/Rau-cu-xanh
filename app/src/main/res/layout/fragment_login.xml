@@ -34,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="@string/user_name_login">
+            android:hint="@string/user_name_login"
+            app:boxBackgroundMode="filled">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username"
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="@string/password_login"
+            app:boxBackgroundMode="filled"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
