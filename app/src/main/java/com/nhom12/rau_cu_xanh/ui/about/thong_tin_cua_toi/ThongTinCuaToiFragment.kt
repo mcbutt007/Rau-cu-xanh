@@ -47,10 +47,9 @@ class ThongTinCuaToiFragment : Fragment() {
             // Setting up the event for when ok is clicked
             datePicker.addOnPositiveButtonClickListener {
                 // formatting date in dd-mm-yyyy format.
-                val dateFormatter = SimpleDateFormat("dd-MM-yyyy")
+                val dateFormatter = SimpleDateFormat("dd/MM/yyyy")
                 val date = dateFormatter.format(Date(it))
-                Toast.makeText(activity?.applicationContext, "$date is selected", Toast.LENGTH_LONG)
-                    .show()
+                date_selected.text = date.toString()
             }
             // Setting up the event for when cancelled is clicked
             datePicker.addOnNegativeButtonClickListener {
