@@ -27,7 +27,7 @@
             android:layout_weight="1"
             android:gravity="center|end"
             android:text="@string/rau_cu"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             tools:ignore="RtlHardcoded" />
 
@@ -39,7 +39,7 @@
             android:gravity="center|start"
             android:text="@string/XANH"
             android:textColor="@color/green_500"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView

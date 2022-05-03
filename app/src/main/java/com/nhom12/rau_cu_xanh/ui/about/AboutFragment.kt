@@ -59,6 +59,7 @@ class AboutFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_chiTieuThangFragment))
         binding.donHang.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_about_to_donHangFragment))
+
         //Dang xuat
         binding.dangXuat.setOnClickListener {
             val intent = Intent(this@AboutFragment.requireContext(), LoginActivity::class.java)
