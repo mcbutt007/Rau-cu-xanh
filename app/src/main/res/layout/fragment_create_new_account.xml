@@ -44,7 +44,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             app:endIconMode="password_toggle"
             android:hint="@string/new_mat_khau">
 
@@ -58,8 +57,8 @@
 
         <CheckBox
             android:id="@+id/terms_and_conditions_check"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/agree_to_terms" />
