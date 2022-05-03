@@ -1,6 +1,9 @@
 package com.nhom12.rau_cu_xanh.ui.login;
 
 public class User {
+    private int page;
+    private int per_page;
+
     public int getPage() {
         return page;
     }
@@ -16,10 +19,4 @@ public class User {
     public void setPer_page(int per_page) {
         this.per_page = per_page;
     }
-
-    private  int page;
-   private   int  per_page;
-
-
-
 }

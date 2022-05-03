@@ -1,6 +1,5 @@
 package com.nhom12.rau_cu_xanh.ui.login
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,16 +10,16 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.nhom12.rau_cu_xanh.LoginActivity
 import com.nhom12.rau_cu_xanh.MainActivity
 import com.nhom12.rau_cu_xanh.R
 import com.nhom12.rau_cu_xanh.databinding.FragmentLoginBinding
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class LoginFragment : Fragment() {
+    private val user: User? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,11 +41,13 @@ class LoginFragment : Fragment() {
 
         binding.buttonDangNhap.setOnClickListener() {
 
+
             //Import username & password
             val struser: String = binding.username.text.toString().trim()
             val strpass: String = binding.password.text.toString().trim()
-            val struser1: String = java.lang.String.valueOf(user.page)
-            val strpass1: String = java.lang.String.valueOf(user.per_page)
+            val struser1 = user.page.toString()
+            val strpass1 = user.per_page.toString()
+
             Log.i("MyDebug", "Username : $struser")
             Log.i("MyDebug", "Username1 : $struser1")
             Log.i("MyDebug", "Passwd : $strpass")
@@ -71,10 +72,10 @@ class LoginFragment : Fragment() {
         AppService.apiService.getlist("1").enqueue(object : Callback<User?> {
             override fun onResponse(call: Call<User?>, response: Response<User?>) {
                 val user = response.body()
-                //tv3.setText(String.valueOf(user.getPage()));
             }
 
             override fun onFailure(call: Call<User?>, t: Throwable) {
+                Toast.makeText(activity?.applicationContext,"Kết nối thất bại, xem lại internet của bạn",Toast.LENGTH_SHORT).show()
             }
         })
     }
