@@ -17,9 +17,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class LoginFragment : Fragment() {
-    private val user: User? = null
+    private var user: User? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +27,7 @@ class LoginFragment : Fragment() {
             inflater, R.layout.fragment_login, container, false
         )
 
-        val user = User()
+        user = User()
         getList()
 
         binding.quenMatKhau.setOnClickListener(
@@ -45,8 +44,8 @@ class LoginFragment : Fragment() {
             //Import username & password
             val struser: String = binding.username.text.toString().trim()
             val strpass: String = binding.password.text.toString().trim()
-            val struser1 = user.page.toString()
-            val strpass1 = user.per_page.toString()
+            val struser1 = user!!.page.toString()
+            val strpass1 = user!!.per_page.toString()
 
             Log.i("MyDebug", "Username : $struser")
             Log.i("MyDebug", "Username1 : $struser1")
@@ -71,7 +70,7 @@ class LoginFragment : Fragment() {
     private fun getList() {
         AppService.apiService.getlist("1").enqueue(object : Callback<User?> {
             override fun onResponse(call: Call<User?>, response: Response<User?>) {
-                val user = response.body()
+                user = response.body()
             }
 
             override fun onFailure(call: Call<User?>, t: Throwable) {
