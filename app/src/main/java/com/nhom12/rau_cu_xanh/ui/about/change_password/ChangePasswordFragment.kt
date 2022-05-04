@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_change_password.*
 import kotlinx.android.synthetic.main.return_to_title.*
 
 class ChangePasswordFragment : Fragment() {
@@ -30,5 +32,17 @@ class ChangePasswordFragment : Fragment() {
         back_to_about.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_changePasswordFragment_to_navigation_about))
         //Title text
         title_about_to?.setText(R.string.title_change_password)
+
+        button_xac_nhan.setOnClickListener{
+            if (nhap_lai_mat_khau_moi.text.toString()==mat_khau_moi.text.toString()) {
+                Toast.makeText(
+                    activity?.applicationContext,
+                    "Cập nhật mật khẩu thành công",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                Toast.makeText(activity?.applicationContext,"Mật khẩu không đúng", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
