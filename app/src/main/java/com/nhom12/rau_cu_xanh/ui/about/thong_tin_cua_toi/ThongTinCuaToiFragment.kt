@@ -70,5 +70,8 @@ class ThongTinCuaToiFragment : Fragment() {
         val adapter = ArrayAdapter(requireContext(), R.layout.list_gioi_tinh, items)
         gioi_tinh.setAdapter(adapter)
 
+        button_cap_nhat.setOnClickListener{
+            Toast.makeText(activity?.applicationContext, "Cập nhật thành công", Toast.LENGTH_LONG).show()
+        }
     }
 }

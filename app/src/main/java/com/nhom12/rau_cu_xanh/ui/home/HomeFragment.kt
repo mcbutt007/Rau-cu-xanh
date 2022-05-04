@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import com.nhom12.rau_cu_xanh.databinding.FragmentHomeBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class HomeFragment : Fragment() {
@@ -46,9 +47,10 @@ class HomeFragment : Fragment() {
 
         binding.giohang.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_cartFragment))
+
+
         return root
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
