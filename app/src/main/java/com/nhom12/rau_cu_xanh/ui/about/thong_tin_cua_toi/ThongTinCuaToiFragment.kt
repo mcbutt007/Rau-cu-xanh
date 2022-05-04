@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.databinding.adapters.AdapterViewBindingAdapter.setSelection
 import androidx.fragment.app.Fragment
@@ -12,6 +14,7 @@ import androidx.navigation.Navigation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.nhom12.rau_cu_xanh.R
+import kotlinx.android.synthetic.main.fragment_change_password.*
 import kotlinx.android.synthetic.main.fragment_thong_tin_cua_toi.*
 import kotlinx.android.synthetic.main.return_to_title.*
 import java.text.SimpleDateFormat
@@ -61,5 +64,11 @@ class ThongTinCuaToiFragment : Fragment() {
                 Toast.makeText(activity?.applicationContext, "Date Picker Cancelled", Toast.LENGTH_LONG).show()
             }
         }
+
+        //Setup chon gioi tinh
+        val items = listOf("Hảo hán", "Nam", "Nữ")
+        val adapter = ArrayAdapter(requireContext(), R.layout.list_gioi_tinh, items)
+        gioi_tinh.setAdapter(adapter)
+
     }
 }

@@ -162,23 +162,23 @@
                     android:text="@string/gioi_tinh"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/text_user_gioi_tinh"
-                    android:layout_width="0dp"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/menu_gioitinh"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/user_name"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    android:textSize="16sp" />
+                    >
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="10dp"
-                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+                    <AutoCompleteTextView
+                        android:id="@+id/gioi_tinh"
+                        android:text="@string/user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
