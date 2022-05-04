@@ -56,38 +56,298 @@
         android:layout_height="1dp"
         android:background="@color/light_grey"/>
 
-    <ScrollView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="56dp">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="0dp">
+            android:layout_height="match_parent">
 
-            <HorizontalScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:scrollbars="none">
+                android:orientation="vertical"
+                android:paddingBottom="0dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/ban_chay"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:outlineProvider="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/light_grey"
+                                    app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                    app:srcCompat="@drawable/baseline_star_black_24dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/ban_chay" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/buttonKhuyenMai"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:outlineProvider="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/light_grey"
+                                    app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                    app:srcCompat="@drawable/baseline_sell_black_24dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/title_khuyen_mai" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button_trai_cay"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:outlineProvider="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/light_grey"
+                                    app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                    app:srcCompat="@drawable/banana2" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/trai_cay" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rau"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:outlineProvider="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/light_grey"
+                                    app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                    app:srcCompat="@drawable/leaf" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/rau" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/gia_vi"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:outlineProvider="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/light_grey"
+                                    app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                    app:srcCompat="@drawable/giavi" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/gia_vi" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cu"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:outlineProvider="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/light_grey"
+                                    app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                    app:srcCompat="@drawable/potato2" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/cu" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/vietgap"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:outlineProvider="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/light_grey"
+                                    app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
+                                    app:srcCompat="@drawable/vietgap" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/vietgap" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/light_grey" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/san_pham_noi_bat"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/ban_chay"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
                         android:checkable="true"
                         android:clickable="true"
-                        android:focusable="true"
-                        android:outlineProvider="none">
+                        android:focusable="true">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -95,98 +355,42 @@
                             android:orientation="vertical">
 
                             <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@color/light_grey"
-                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
-                                app:srcCompat="@drawable/baseline_star_black_24dp" />
+                                android:id="@+id/cardQuaOt"
+                                android:layout_width="match_parent"
+                                android:layout_height="240dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/chilli_pepper"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/ban_chay" />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/buttonKhuyenMai"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:checkable="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:outlineProvider="none">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@color/light_grey"
-                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
-                                app:srcCompat="@drawable/baseline_sell_black_24dp" />
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Ớt"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="32dp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/title_khuyen_mai" />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/button_trai_cay"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:checkable="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:outlineProvider="none">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@color/light_grey"
-                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
-                                app:srcCompat="@drawable/banana2" />
-
-                            <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/trai_cay" />
+                                android:layout_marginStart="10dp"
+                                android:text="60.000 VND"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="#F44336" />
+
                         </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/rau"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
                         android:checkable="true"
                         android:clickable="true"
-                        android:focusable="true"
-                        android:outlineProvider="none">
+                        android:focusable="true">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -194,693 +398,220 @@
                             android:orientation="vertical">
 
                             <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@color/light_grey"
-                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
-                                app:srcCompat="@drawable/leaf" />
+                                android:layout_width="match_parent"
+                                android:layout_height="240dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mushroom"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/rau" />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/gia_vi"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:checkable="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:outlineProvider="none">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@color/light_grey"
-                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
-                                app:srcCompat="@drawable/giavi" />
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Nấm"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/gia_vi" />
+                                android:layout_marginStart="10dp"
+                                android:text="180.000 VND"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="#F44336" />
+
                         </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cu"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:checkable="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:outlineProvider="none">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@color/light_grey"
-                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
-                                app:srcCompat="@drawable/potato2" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/cu" />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/vietgap"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:checkable="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:outlineProvider="none">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:layout_gravity="center"
-                                android:background="@color/light_grey"
-                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView"
-                                app:srcCompat="@drawable/vietgap" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:text="@string/vietgap" />
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
-            </HorizontalScrollView>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:background="@color/light_grey"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/san_pham_noi_bat"
-                android:textColor="@color/black"
-                android:layout_margin="5dp"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true">
 
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/cardQuaOt"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Ớt"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="240dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/chilli_pepper"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="60.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Ớt"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
 
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="60.000 VND"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="#F44336" />
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true">
 
-                        <com.google.android.material.imageview.ShapeableImageView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Nấm"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="240dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mushroom"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="180.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Nấm"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
 
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="180.000 VND"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="#F44336" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="240dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/chilli_pepper"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Ớt"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="60.000 VND"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="#F44336" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="240dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mushroom"
+                                app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Nấm"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="180.000 VND"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="#F44336" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
             </LinearLayout>
+        </ScrollView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Ớt"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="60.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Nấm"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="180.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Ớt"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="60.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Nấm"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="180.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Ớt"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="60.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Nấm"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="180.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Ớt"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="60.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Nấm"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="180.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/chilli_pepper"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Ớt"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="60.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="1"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="240dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/mushroom"
-                            app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Nấm"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="180.000 VND"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="#F44336" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </LinearLayout>
