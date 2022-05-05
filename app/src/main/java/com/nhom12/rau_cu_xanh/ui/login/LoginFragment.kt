@@ -10,15 +10,18 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.nhom12.rau_cu_xanh.MainActivity
 import com.nhom12.rau_cu_xanh.R
+import com.nhom12.rau_cu_xanh.api.login.login_Api.Companion.ApiService
 import com.nhom12.rau_cu_xanh.databinding.FragmentLoginBinding
+import com.nhom12.rau_cu_xanh.model.User
+import kotlinx.android.synthetic.main.fragment_login.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class LoginFragment : Fragment() {
-    private var user: User? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,9 +29,6 @@ class LoginFragment : Fragment() {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false
         )
-
-        user = User()
-        getList()
 
         binding.quenMatKhau.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_forgetPasswordFragment)
@@ -39,47 +39,55 @@ class LoginFragment : Fragment() {
         )
 
         binding.buttonDangNhap.setOnClickListener() {
-
-
-            //Import username & password
-            val struser: String = binding.username.text.toString().trim()
-            val strpass: String = binding.password.text.toString().trim()
-            val struser1 = user!!.page.toString()
-            val strpass1 = user!!.per_page.toString()
-
-            Log.i("MyDebug", "Username : $struser")
-            Log.i("MyDebug", "Username1 : $struser1")
-            Log.i("MyDebug", "Passwd : $strpass")
-            Log.i("MyDebug", "Passwd1 : $strpass1")
-
-            //Username = 0 Password = 0
-            //check
-            val check = struser == struser1 && strpass == strpass1
-
-            if (check) {
-                Toast.makeText(activity?.applicationContext,"Đăng nhập thành công",Toast.LENGTH_SHORT).show()
-                switchActivities()
-            } else {
-                Toast.makeText(activity?.applicationContext,"Mật khẩu hoặc tài khoản không đúng",Toast.LENGTH_SHORT).show()
-            }
+            check_User_Login()
         }
 
         return binding.root
     }
 
-    private fun getList() {
-        AppService.apiService.getlist("1").enqueue(object : Callback<User?> {
-            override fun onResponse(call: Call<User?>, response: Response<User?>) {
-                user = response.body()
+    private fun getMyData() {
+        ApiService.getUser(4).enqueue(object : Callback<Array<User>> {
+            override fun onResponse(call: Call<Array<User>>, response: Response<Array<User>>) {
+                Log.e("Test response", response.body().toString())
+                Toast.makeText(activity,"Yeah!!",Toast.LENGTH_SHORT)
+                val books: Array<User>? = response.body()
+                if (books != null) {
+                    val book: User = books[0]
+                    username.setText(book.full_name)
+                    password.setText(book.password)
+                }
             }
 
-            override fun onFailure(call: Call<User?>, t: Throwable) {
-                Toast.makeText(activity?.applicationContext,"Kết nối thất bại, xem lại internet của bạn",Toast.LENGTH_SHORT).show()
+            override fun onFailure(call: Call<Array<User>>, t: Throwable) {
+                Toast.makeText(activity, "Failed!! " + t.message, Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+    private fun check_User_Login() {
+
+        val str: String = username.text.toString()
+        ApiService.getUser_via_UserName(str).enqueue(object : Callback<Array<User>> {
+            override fun onResponse(call: Call<Array<User>>, response: Response<Array<User>>) {
+                Log.e("Test response", response.body().toString())
+                val books: Array<User>? = response.body()
+                if (books != null) {
+                    val book: User = books[0]
+                    if(book.password == password.text.toString())
+                        switchToMainActivities()
+                    else
+                        Toast.makeText(activity, "Password not Correct!!",Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(activity, "User not fond!!",Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<Array<User>>, t: Throwable) {
+                Toast.makeText(activity, "Failed!! " + t.message, Toast.LENGTH_SHORT).show()
             }
         })
     }
 
-    private fun switchActivities() {
+    private fun switchToMainActivities() {
         val switchActivityIntent = Intent(context, MainActivity::class.java)
         startActivity(switchActivityIntent)
     }
