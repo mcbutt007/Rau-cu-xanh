@@ -14,7 +14,7 @@ import retrofit2.http.Query
 interface login_Api {
 
     companion object {
-        var BASE_URL = "http://35.184.157.153:5000/"
+        var BASE_URL = "http://127.0.0.1:5000/"
 
             val ApiService = Retrofit.Builder()
                 .baseUrl(BASE_URL)

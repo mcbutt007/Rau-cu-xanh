@@ -39,6 +39,9 @@ class LoginFragment : Fragment() {
         )
 
         binding.buttonDangNhap.setOnClickListener() {
+            //Bypass login
+            switchToMainActivities()
+
             check_User_Login()
         }
 
@@ -49,7 +52,7 @@ class LoginFragment : Fragment() {
         ApiService.getUser(4).enqueue(object : Callback<Array<User>> {
             override fun onResponse(call: Call<Array<User>>, response: Response<Array<User>>) {
                 Log.e("Test response", response.body().toString())
-                Toast.makeText(activity,"Yeah!!",Toast.LENGTH_SHORT)
+                Toast.makeText(activity,"Yeah!!",Toast.LENGTH_SHORT).show()
                 val books: Array<User>? = response.body()
                 if (books != null) {
                     val book: User = books[0]
