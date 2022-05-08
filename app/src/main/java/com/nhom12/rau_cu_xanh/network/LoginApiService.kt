@@ -21,9 +21,23 @@ interface LoginApiService {
     // add params to url ex : http://192.168.1.35:5000/login?username=Teo&password=123
     @POST("login") //send POST request to server
     suspend fun sendLoginInfo(
-        @Query("username") username: String?,
-        @Query("password") password: String?
+        @Query("username") username: String,
+        @Query("password") password: String
     ) : Int
+
+    // ex: http://192.168.1.35:5000/login?email=example%40gmail.com
+    @POST("resetpassword")
+    suspend fun sendEmailResetPassword(
+        @Query("email") email : String
+    ) : String
+
+    // ex: http://192.168.1.35:5000/registration?username=Phuc&email=phuc%40gmail.com&password=123456
+    @POST("registration")
+    suspend fun sendRegistrationInfo(
+        @Query("username") username : String,
+        @Query("email") email : String,
+        @Query("password") password : String
+    ) : String
 }
 
 object LoginApi {
