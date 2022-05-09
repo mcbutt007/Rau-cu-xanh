@@ -25,13 +25,13 @@ interface LoginApiService {
         @Query("password") password: String
     ) : Int
 
-    // ex: http://192.168.1.35:5000/login?email=example%40gmail.com
+    // ex: http://192.168.1.35:5000/login?email=example@gmail.com
     @POST("resetpassword")
     suspend fun sendEmailResetPassword(
         @Query("email") email : String
     ) : String
 
-    // ex: http://192.168.1.35:5000/registration?username=Phuc&email=phuc%40gmail.com&password=123456
+    // ex: http://192.168.1.35:5000/registration?username=Phuc&email=phuc@gmail.com&password=123456
     @POST("registration")
     suspend fun sendRegistrationInfo(
         @Query("username") username : String,
