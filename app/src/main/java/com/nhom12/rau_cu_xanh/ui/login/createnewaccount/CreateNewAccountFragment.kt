@@ -10,8 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import com.nhom12.rau_cu_xanh.databinding.FragmentCreateNewAccountBinding
+import com.nhom12.rau_cu_xanh.network.LoginApi
 import kotlinx.android.synthetic.main.fragment_create_new_account.*
 import kotlinx.android.synthetic.main.return_to_title.*
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class CreateNewAccountFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -32,9 +37,7 @@ class CreateNewAccountFragment : Fragment() {
         //Check edit text view is null or not
         button_tao_tk_moi.setOnClickListener{
             if (!username.text.isNullOrBlank() && !user_email.text.isNullOrBlank() && !user_password.text.isNullOrBlank() && terms_and_conditions_check.isChecked) {
-                Toast.makeText(activity?.applicationContext, "Tạo tài khoản mới thành công", Toast.LENGTH_SHORT)
-                    .show()
-                Navigation.findNavController(view).navigate(R.id.action_createNewAccountFragment_to_createNewAccountSuccessFragment)
+                sendRegistrationInfoToServer(username.text.toString(), user_email.text.toString(), user_password.text.toString())
             } else if (!terms_and_conditions_check.isChecked) {
                 Toast.makeText(activity?.applicationContext, "Bạn chưa đồng ý với điều khoản", Toast.LENGTH_SHORT)
                     .show()
@@ -45,5 +48,25 @@ class CreateNewAccountFragment : Fragment() {
 
         }
 
+    }
+    @OptIn(DelicateCoroutinesApi::class)
+    private fun sendRegistrationInfoToServer(username: String, email: String, password: String) {
+        GlobalScope .launch(Dispatchers.Main) {
+            try {
+                //send user info to backend
+                val serverResponse = LoginApi.retrofitService.sendRegistrationInfo(username, email, password)
+
+                Toast.makeText(activity?.applicationContext, serverResponse, Toast.LENGTH_SHORT)
+                    .show()
+                view?.let { Navigation.findNavController(it).navigate(R.id.action_createNewAccountFragment_to_createNewAccountSuccessFragment) }
+
+            } catch (e: Exception) {
+                Toast.makeText(
+                    activity?.applicationContext,
+                    e.toString(),
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
     }
 }

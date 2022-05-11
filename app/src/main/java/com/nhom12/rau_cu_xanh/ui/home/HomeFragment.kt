@@ -51,6 +51,7 @@ class HomeFragment : Fragment() {
         binding.giohang.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_cartFragment))
 
+        // Swipe refresh : kéo xuống để cập nhật
         binding.swipeRefreshHome.setOnRefreshListener {
             Toast.makeText(activity?.applicationContext,"Đang cập nhật...", Toast.LENGTH_SHORT).show()
             // To keep animation for 4 seconds
