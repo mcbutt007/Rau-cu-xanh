@@ -9,7 +9,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.*
 
 private const val BASE_URL =
-    "http://192.168.42.246:5000/"
+    "http://192.168.42.158:5000/"
 
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(ScalarsConverterFactory.create())
