@@ -8,11 +8,11 @@ Thư mục layout : Chứa các màn hình giao diện
 + fragment : mảnh giao diện
 + activity : hoạt động cụ thể. Chứa điều hướng (navigation) và mảnh giao diện tương ứng của điều hướng. Tạm thời có 2 hoạt động là login (chỉ chứa phần login, đk tài khoản, quên mk) và main (chứa mọi thứ còn lại khi người dùng đã đăng nhập)
 
-Thư mục ui : chứa điều khiển các màn hình giao diện.
+		Thư mục ui : chứa điều khiển các màn hình giao diện.
 + fragment : logic điền khiển mảnh tương ứng
 + activity & viewmodel : chưa cần quan tâm đến
 
-Khác
+		Khác
 - Thư mục navigation : chứa điều hướng của các hoạt động
 - Thư mục network : chứa các api
 - Thư mục model chứa các đối tượng
@@ -23,12 +23,12 @@ Khác
 - quên mật khẩu : email người dùng gửi sẽ đc thêm vào csdl bảng quên mật khẩu
 - Đăng ký : Thông tin đăng ký người dùng gửi sẽ đc thêm vào csdl
 
-Tiến độ app:
+		Tiến độ app:
 - Đăng nhập flow : Hoàn thành
 - Thay đổi thông tin người dùng : Dự kiến xong 14/5/2022(Phúc)
 - Còn lại : UI con 1 số lỗi hiển thị, tạm xong điều hướng, chưa làm phần logic, đổ dữ liệu.
 
-Tiến độ backend :
+		Tiến độ backend :
 - Đăng nhập : hoàn thành với csdl thử nghiệm
 - cdsl : chưa có
 - còn lại : chưa hoàn thành

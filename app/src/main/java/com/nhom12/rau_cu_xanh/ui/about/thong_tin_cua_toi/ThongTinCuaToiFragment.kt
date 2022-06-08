@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.navigation.Navigation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.nhom12.rau_cu_xanh.MainActivity
 import com.nhom12.rau_cu_xanh.R
 import kotlinx.android.synthetic.main.fragment_create_new_account_success.*
 import kotlinx.android.synthetic.main.fragment_thong_tin_cua_toi.*
@@ -29,6 +30,7 @@ import java.util.*
 
 class ThongTinCuaToiFragment : Fragment() {
 
+    var userid = (activity as MainActivity).userid
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -94,6 +96,7 @@ class ThongTinCuaToiFragment : Fragment() {
         }
     }
     // image chooser
+
     val REQUEST_CODE = 100
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

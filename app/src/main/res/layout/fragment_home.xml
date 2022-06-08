@@ -350,12 +350,13 @@
                         android:focusable="true">
 
                         <LinearLayout
+                            android:id="@+id/test"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
                             <com.google.android.material.imageview.ShapeableImageView
-                                android:id="@+id/cardQuaOt"
+                                android:id="@+id/hinhQuaOt"
                                 android:layout_width="match_parent"
                                 android:layout_height="240dp"
                                 android:scaleType="centerCrop"
@@ -363,6 +364,7 @@
                                 app:shapeAppearanceOverlay="@style/roundedEdgeImageView" />
 
                             <TextView
+                                android:id="@+id/tenQuaOt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
@@ -371,6 +373,7 @@
                                 android:textAppearance="?attr/textAppearanceHeadline6" />
 
                             <TextView
+                                android:id="@+id/giaQuaOt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
