@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
+import com.nhom12.rau_cu_xanh.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.fragment_chitietsanpham.*
 import kotlinx.android.synthetic.main.return_to_title.*
 
@@ -25,6 +26,8 @@ class ChiTietSanPhamFragment : Fragment() {
 
         //Back button setup
         back_to_about.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietSanPhamFragment_to_navigation_home))
+
+        mua_ngay.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietSanPhamFragment_to_thanhToanFragment))
 
         cua_hang.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietSanPhamFragment_to_storeFragment))
         //Title text

@@ -96,6 +96,9 @@
         <action
             android:id="@+id/action_chiTietSanPhamFragment_to_storeFragment"
             app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_chiTietSanPhamFragment_to_thanhToanFragment"
+            app:destination="@id/thanhToanFragment" />
     </fragment>
     <fragment
         android:id="@+id/donHangFragment"
@@ -158,5 +161,13 @@
         <action
             android:id="@+id/action_traiCayFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/thanhToanFragment"
+        android:name="com.nhom12.rau_cu_xanh.ui.thanhtoan.ThanhToanFragment"
+        android:label="ThanhToanFragment" >
+        <action
+            android:id="@+id/action_thanhToanFragment_to_chiTietHoaDonFragment"
+            app:destination="@id/chiTietHoaDonFragment" />
     </fragment>
 </navigation>

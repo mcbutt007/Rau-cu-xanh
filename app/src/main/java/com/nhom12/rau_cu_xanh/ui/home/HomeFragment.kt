@@ -25,6 +25,7 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
+    var selected_RauCu_ID : Int = 0
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -45,8 +46,10 @@ class HomeFragment : Fragment() {
         //    textView.text = it
         //}
 
-        binding.hinhQuaOt.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_chiTietSanPhamFragment))
+        binding.hinhQuaOt.setOnClickListener() {
+            selected_RauCu_ID = 1
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_chiTietSanPhamFragment)
+        }
 
         binding.buttonKhuyenMai.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_khuyenMaiFragment))

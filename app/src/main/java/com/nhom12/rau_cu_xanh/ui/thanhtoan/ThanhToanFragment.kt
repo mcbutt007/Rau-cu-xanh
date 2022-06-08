@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.nhom12.rau_cu_xanh.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_thanhtoan.*
 import kotlinx.android.synthetic.main.return_to_title.*
 
 class ThanhToanFragment : Fragment() {
@@ -29,5 +31,9 @@ class ThanhToanFragment : Fragment() {
         //back_to_about.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.))
         //Title text
         title_about_to?.setText(R.string.title_thanh_toan)
+
+        dat_hang.setOnClickListener{
+            Navigation.createNavigateOnClickListener(R.id.action_thanhToanFragment_to_chiTietHoaDonFragment)
+            }
+        }
     }
-}
