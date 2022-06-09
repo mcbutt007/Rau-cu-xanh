@@ -28,16 +28,11 @@ Thư mục layout : Chứa các màn hình giao diện
 - Thay đổi thông tin người dùng : Dự kiến xong 14/5/2022(Phúc)
 - Còn lại : UI con 1 số lỗi hiển thị, tạm xong điều hướng, chưa làm phần logic, đổ dữ liệu.
 
-		Tiến độ backend :
-- Đăng nhập : hoàn thành với csdl thử nghiệm
-- cdsl : chưa có
-- còn lại : chưa hoàn thành
-
-## Task
-- CSDL của backend
-- Backend cho dữ liệu mẫu để sử dụng trên app 
+## Task Ưu tiên mua được hàng!!!
+- Insert dữ liệu mẫu (sát với thực tế)
+- Web admin backend
+- Chia code ra trong nhiều folder
 - Thay đổi thông tin người dùng
-- Lấy dữ liệu từ server và bỏ vào app
 - Trang chủ
 - Hóa đơn
 - Chi tiết hóa đơn
