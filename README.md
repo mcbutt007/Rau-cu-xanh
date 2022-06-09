@@ -1,7 +1,7 @@
 # Rau củ xanh
 Giao diện figma : https://www.figma.com/file/E0De1xfGd9dewDaw1Shi1b/Rau-c%E1%BB%A7-xanh?node-id=2%3A2 <br>
-Backend demo login : https://github.com/mcbutt007/Rau-cu-xanh-backend <br>
-Chức năng : https://docs.google.com/spreadsheets/d/1w80mBDcXp8sWXuKkYtednBwKxqv1SHWFd2pq2dwLTG8/edit#gid=0 <br>
+Backend : https://github.com/mcbutt007/Rau-cu-xanh-backend <br>
+Chức năng ưu tiên phần mua hàng, hóa đơn : https://docs.google.com/spreadsheets/d/1w80mBDcXp8sWXuKkYtednBwKxqv1SHWFd2pq2dwLTG8/edit#gid=0 <br>
 
 ## Tóm tắt thiết kế app:
 Thư mục layout : Chứa các màn hình giao diện
