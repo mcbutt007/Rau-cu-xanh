@@ -29,6 +29,7 @@ Thư mục layout : Chứa các màn hình giao diện
 - Còn lại : UI con 1 số lỗi hiển thị, tạm xong điều hướng, chưa làm phần logic, đổ dữ liệu.
 
 ## Task Ưu tiên mua được hàng!!!
+- Recycler view
 - Insert dữ liệu mẫu (sát với thực tế)
 - Web admin backend
 - Chia code ra trong nhiều folder
@@ -42,16 +43,14 @@ Thư mục layout : Chứa các màn hình giao diện
 - Tìm kiếm
 - Thống kê
 
-## Hướng làm:
+## Hướng làm (đã có code mẫu lấy hình ảnh, parse json trên HomeFragment):
 - Trang chủ, Sản phẩm, đánh giá, tìm kiếm : gửi request lấy dữ liệu như phần login & đọc json từ backend và đổ vào view
 - Giỏ hàng, hóa đơn, chi tiết hóa đơn, thống kê : trong request có user id, còn lại giống trang chủ
 
 
 ## Cải tiến nếu có thời gian
-- Setup csdl để cache trên app
-- Recycler view
+- Setup cache trên app
 - Cải tiến lại UI
 - Refactor code
 - Áp dụng kiến trúc Viewmodel factory 
 - Xử lý background & thread & coroutine
-
