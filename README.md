@@ -29,10 +29,7 @@ Thư mục layout : Chứa các màn hình giao diện
 - Còn lại : UI con 1 số lỗi hiển thị, tạm xong điều hướng, chưa làm phần logic, đổ dữ liệu.
 
 ## Task Ưu tiên mua được hàng!!!
-- Recycler view
 - Insert dữ liệu mẫu (sát với thực tế)
-- Web admin backend
-- Chia code ra trong nhiều folder
 - Thay đổi thông tin người dùng
 - Trang chủ
 - Hóa đơn
@@ -42,6 +39,7 @@ Thư mục layout : Chứa các màn hình giao diện
 - Đánh giá
 - Tìm kiếm
 - Thống kê
+- Chia code ra trong nhiều folder
 
 ## Hướng làm (đã có code mẫu lấy hình ảnh, parse json trên HomeFragment):
 - Trang chủ, Sản phẩm, đánh giá, tìm kiếm : gửi request lấy dữ liệu như phần login & đọc json từ backend và đổ vào view
