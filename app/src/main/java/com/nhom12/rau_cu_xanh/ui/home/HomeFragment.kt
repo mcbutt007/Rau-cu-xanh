@@ -85,7 +85,9 @@ class HomeFragment : Fragment() {
             }
 
             override fun onItemLongClick(view: View?, position: Int) {
-                TODO("Not yet implemented")
+                view?.card?.setOnClickListener {
+                    Toast.makeText(context,position.toString(),Toast.LENGTH_SHORT).show()
+                }
             }
         }))
     }
