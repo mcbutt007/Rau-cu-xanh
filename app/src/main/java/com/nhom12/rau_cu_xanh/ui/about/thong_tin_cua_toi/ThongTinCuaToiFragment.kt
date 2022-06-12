@@ -30,7 +30,6 @@ import java.util.*
 
 class ThongTinCuaToiFragment : Fragment() {
 
-    var userid = (activity as MainActivity).userid
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

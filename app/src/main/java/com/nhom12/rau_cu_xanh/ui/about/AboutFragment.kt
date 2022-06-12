@@ -1,6 +1,8 @@
 package com.nhom12.rau_cu_xanh.ui.about
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +29,7 @@ class AboutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val aboutViewModel =
-            ViewModelProvider(this).get(AboutViewModel::class.java)
+            ViewModelProvider(this)[AboutViewModel::class.java]
 
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -35,20 +37,6 @@ class AboutFragment : Fragment() {
         // enable bottom nav bar
         val navBar: BottomNavigationView = requireActivity().findViewById(R.id.nav_view)
         navBar.visibility = View.VISIBLE
-
-        //val textView: TextView = binding.textAbout
-        //aboutViewModel.text.observe(viewLifecycleOwner) {
-        //    textView.text = it
-        //}
-        // Đưa list view vào
-        //val aboutList: ListView = binding.listSettingsAbout
-        //1. Khởi tạo dữ liệu cho mảng arr (còn gọi là data source)
-        //val arrHeading = resources.getStringArray(R.array.about_card_heading)
-        //val arrSub = resources.getStringArray(R.array.about_card_sub)
-        //3. Gán Data source vào ArrayAdapter
-        //val adapter = ArrayAdapter.createFromResource(requireActivity(),R.array.about_card_heading,android.R.layout.two_line_list_item)
-        //4. Đưa Data source vào ListView
-        //aboutList.adapter = adapter
 
         //Di chuyển đến
         binding.doiThongTin.setOnClickListener (
@@ -62,10 +50,17 @@ class AboutFragment : Fragment() {
 
         //Dang xuat
         binding.dangXuat.setOnClickListener {
+            val sharedPref : SharedPreferences? =
+                activity?.getSharedPreferences("LoginStatus", Context.MODE_PRIVATE)
+            val editor = sharedPref?.edit()
+            editor?.putInt("UserID", 0)
+            editor?.putBoolean("RememberLogin", false)
+            editor?.commit()
+
             val intent = Intent(this@AboutFragment.requireContext(), LoginActivity::class.java)
             startActivity(intent)
+            activity?.finish()
         }
-
         return root
     }
 

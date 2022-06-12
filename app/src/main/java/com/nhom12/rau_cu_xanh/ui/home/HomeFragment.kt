@@ -24,6 +24,8 @@ import kotlinx.coroutines.launch
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
+    private val TIME_DELAY = 2000
+    private var back_pressed: Long = 0
 
     var selected_RauCu_ID : Int = 0
     // This property is only valid between onCreateView and
@@ -71,6 +73,7 @@ class HomeFragment : Fragment() {
         }
         return root
     }
+
     @OptIn(DelicateCoroutinesApi::class)
     private fun getProductFrom () {
         GlobalScope.launch(Dispatchers.Main) {
@@ -94,7 +97,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Glide.with(this)
                 .load("http://192.168.1.218:5000/raucu/0.png") // image url
-                .centerCrop()
+                .centerCrop() // im
                 .into(test.hinhQuaOt);  // imageview object
     }
     override fun onDestroyView() {
