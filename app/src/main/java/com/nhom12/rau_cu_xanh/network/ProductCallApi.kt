@@ -8,8 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
 
-private const val BASE_URL =
-    "http://192.168.1.46:5000/"
+private val BASE_URL = getBaseUrl()
 
 /**
  * Build the Moshi object with Kotlin adapter factory that Retrofit will be using.
@@ -31,9 +30,6 @@ interface ProductCallApi {
     @GET("home") //send GET request to server
     suspend fun getProduct() : List<Product>
 
-}
-fun getBaseUrl(): String {
-    return BASE_URL
 }
 
 object ProductApi {

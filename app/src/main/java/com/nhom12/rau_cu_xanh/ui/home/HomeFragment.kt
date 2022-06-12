@@ -37,11 +37,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(this)[HomeViewModel::class.java]
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        // Đổ dữ liệu vào recyclerview
         GlobalScope.launch (Dispatchers.Main) { FillRecyclerView() }
 
         binding.buttonKhuyenMai.setOnClickListener (
@@ -60,20 +61,22 @@ class HomeFragment : Fragment() {
             Handler().postDelayed(Runnable { // Stop animation (This will be after 3 seconds)
                 swipe_refresh_home.isRefreshing = false
             }, 2000) // Delay in millis
-            //update recyclerview
+            //Code để cập nhật sau khi pull to refresh ở dưới đây:
+
+            //update recyclerview cái GlobalScope tạm thời không quan tâm, chỉ quan tâm đến FillRecyclerView
             GlobalScope.launch (Dispatchers.Main) { FillRecyclerView() }
         }
         return root
     }
 
-    suspend fun FillRecyclerView() {
+    private suspend fun FillRecyclerView() {
         val productList = Datasource().getProductList()
 
         // Chia thành 2 cột
         recyclerviewHome.layoutManager = GridLayoutManager(context, 2)
         // cho vào adapter
         recyclerviewHome.adapter = ProductAdapter(productList)
-        // Khi click vào 1 item
+        // Khi click vào 1 item, chỉ quan tâm đến hàm onItemClick
         recyclerviewHome.addOnItemTouchListener(RecyclerItemClickListenr(requireActivity(), recyclerviewHome, object : RecyclerItemClickListenr.OnItemClickListener {
             override fun onItemClick(view: View, position: Int) {
                 view.card.setOnClickListener {

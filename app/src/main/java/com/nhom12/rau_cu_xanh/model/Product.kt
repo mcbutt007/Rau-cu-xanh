@@ -14,3 +14,17 @@ data class Product(
     @Json(name = "DISCOUNT") var Discount : Float = 0F,
     @Json(name = "ITEMSOLD") var ItemSold : Int = 0,
 )
+/*
+Parse json tư server, VD
+{
+    "DESCRIPTION": "Ớt là một loại quả của các cây thuộc chi Capsicum của họ Cà.",
+    "DISCOUNT": 0,
+    "ITEMSOLD": 20,
+    "NAME": "Ớt ",
+    "PRICE": 5000,
+    "RAUCU_ID": 2,
+    "REVIEW_ID": 0,
+    "SHOP_ID": 1,
+    "TIME_CREATED": "2022-06-08 17:27:11",
+    "TYPE": "rau"
+}*/

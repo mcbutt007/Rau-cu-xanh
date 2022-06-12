@@ -12,8 +12,10 @@ import com.nhom12.rau_cu_xanh.model.Product
 import com.nhom12.rau_cu_xanh.network.getBaseUrl
 import kotlin.coroutines.coroutineContext
 
-class ProductAdapter(val productList :List<Product>) :
-RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+// Đọc ở đây trước để hiểu : https://developer.android.com/guide/topics/ui/layout/recyclerview
+
+class ProductAdapter(val productList: List<Product>) :
+    RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -22,13 +24,15 @@ RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
         private val gia: TextView = itemView.findViewById(R.id.gia)
 
         fun bind(product: Product) {
-            val imageUrl : String = getBaseUrl() + "raucu/" + product.RauCu_ID + ".png"
+            // Lấy URL hình ảnh trên server
+            val imageUrl: String = getBaseUrl() + "raucu/" + product.RauCu_ID + ".png"
+            //Đổ hình ảnh từ url trên vào imageview
             Glide.with(itemView)
                 .load(imageUrl) // image url
                 .centerCrop() // im
                 .into(hinh);  // imageview object
-
-                    ten.text = product.Name
+            // đổ json vào view
+            ten.text = product.Name
             gia.text = product.Price.toString()
         }
     }
