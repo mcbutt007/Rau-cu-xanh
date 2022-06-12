@@ -61,8 +61,6 @@ class MainActivity : AppCompatActivity() {
             if (doubleBackToExitPressedOnce) {
                 super.onBackPressed()
                 finishAndRemoveTask()
-                val pid = Process.myPid()
-                Process.killProcess(pid)
             }
 
             doubleBackToExitPressedOnce = true
@@ -71,7 +69,8 @@ class MainActivity : AppCompatActivity() {
             Handler(Looper.getMainLooper()).postDelayed({
                 doubleBackToExitPressedOnce = false
             }, 2000)
+        } else {
+            super.onBackPressed()
         }
-        super.onBackPressed()
     }
 }

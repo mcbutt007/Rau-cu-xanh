@@ -26,7 +26,7 @@ import kotlinx.coroutines.launch
 
 
 class LoginFragment : Fragment() {
-    var userid : Int = 0
+    private var userid : Int = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,13 +47,18 @@ class LoginFragment : Fragment() {
         binding.buttonDangNhap.setOnClickListener() {
             login()
         }
-
         return binding.root
     }
 
     //send username && password to server
     @OptIn(DelicateCoroutinesApi::class)
     fun login() {
+
+        if (username.text.isNullOrBlank() && password.text.isNullOrBlank()) {
+            Toast.makeText(context,"Bạn chưa điền tài khoản hoặc mật khẩu",Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val user = User(username.text.toString(), password.text.toString())
         GlobalScope .launch(Dispatchers.Main) {
             try {
