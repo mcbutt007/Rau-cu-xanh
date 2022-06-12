@@ -32,6 +32,9 @@ interface ProductCallApi {
     suspend fun getProduct() : List<Product>
 
 }
+fun getBaseUrl(): String {
+    return BASE_URL
+}
 
 object ProductApi {
     val retrofitService : ProductCallApi by lazy {

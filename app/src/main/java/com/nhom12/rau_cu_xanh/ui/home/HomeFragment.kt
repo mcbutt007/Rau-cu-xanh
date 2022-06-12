@@ -9,13 +9,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import com.bumptech.glide.Glide
+import androidx.recyclerview.widget.GridLayoutManager
 import com.nhom12.rau_cu_xanh.R
+import com.nhom12.rau_cu_xanh.adapter.ProductAdapter
 import com.nhom12.rau_cu_xanh.databinding.FragmentHomeBinding
-import com.nhom12.rau_cu_xanh.network.ProductApi
+import com.nhom12.rau_cu_xanh.datasource.Datasource
+import com.nhom12.rau_cu_xanh.helper.onItemClick
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
-import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.android.synthetic.main.product_item.view.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -24,8 +25,6 @@ import kotlinx.coroutines.launch
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-    private val TIME_DELAY = 2000
-    private var back_pressed: Long = 0
 
     var selected_RauCu_ID : Int = 0
     // This property is only valid between onCreateView and
@@ -42,16 +41,8 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        getProductFrom()
-        //val textView: TextView = binding.textHome
-        //homeViewModel.text.observe(viewLifecycleOwner) {
-        //    textView.text = it
-        //}
 
-        binding.hinhQuaOt.setOnClickListener() {
-            selected_RauCu_ID = 1
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_chiTietSanPhamFragment)
-        }
+        GlobalScope.launch (Dispatchers.Main) { FillRecyclerView() }
 
         binding.buttonKhuyenMai.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_khuyenMaiFragment))
@@ -69,37 +60,30 @@ class HomeFragment : Fragment() {
             Handler().postDelayed(Runnable { // Stop animation (This will be after 3 seconds)
                 swipe_refresh_home.isRefreshing = false
             }, 2000) // Delay in millis
-            getProductFrom()
+            //update recyclerview
+            GlobalScope.launch (Dispatchers.Main) { FillRecyclerView() }
         }
         return root
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
-    private fun getProductFrom () {
-        GlobalScope.launch(Dispatchers.Main) {
-            try {
-                val listResult = ProductApi.retrofitService.getProduct()
-                Toast.makeText(
-                    activity,
-                    "Success: ${listResult.size} items retrieved",
-                    Toast.LENGTH_SHORT
-                ).show()
-                tenQuaOt.text = listResult[1].Name
-                giaQuaOt.text = listResult[1].Price.toString() + " VNĐ"
-            } catch (e: Exception) {
-                Toast.makeText(activity, "Failure: ${e.message}", Toast.LENGTH_SHORT)
-                    .show()
+    suspend fun FillRecyclerView() {
+        val productList = Datasource().getProductList()
+
+        // Chia thành 2 cột
+        recyclerviewHome.layoutManager = GridLayoutManager(context, 2)
+        // cho vào adapter
+        recyclerviewHome.adapter = ProductAdapter(productList)
+        // Khi click vào 1 item
+        recyclerviewHome.onItemClick { recyclerView, position, v ->
+            v.card_layout.setOnClickListener{
+                Toast.makeText(context, position.toString(), Toast.LENGTH_SHORT).show()
+                selected_RauCu_ID = position + 1
+                view?.let { it1 -> Navigation.findNavController(it1).navigate(R.id.action_navigation_home_to_chiTietSanPhamFragment) }
             }
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        Glide.with(this)
-                .load("http://192.168.1.218:5000/raucu/0.png") // image url
-                .centerCrop() // im
-                .into(test.hinhQuaOt);  // imageview object
-    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
