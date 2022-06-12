@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 
 private const val BASE_URL =
-    "http://192.168.42.55:5000/"
+    "http://192.168.1.46:5000/"
 
 /**
  * Build the Moshi object with Kotlin adapter factory that Retrofit will be using.

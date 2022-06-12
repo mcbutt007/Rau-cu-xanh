@@ -14,7 +14,9 @@ import kotlin.coroutines.coroutineContext
 
 class ProductAdapter(val productList :List<Product>) :
 RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+
     class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         private val hinh: ImageView = itemView.findViewById(R.id.hinh)
         private val ten: TextView = itemView.findViewById(R.id.ten)
         private val gia: TextView = itemView.findViewById(R.id.gia)

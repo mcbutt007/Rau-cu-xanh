@@ -14,7 +14,7 @@ import com.nhom12.rau_cu_xanh.R
 import com.nhom12.rau_cu_xanh.adapter.ProductAdapter
 import com.nhom12.rau_cu_xanh.databinding.FragmentHomeBinding
 import com.nhom12.rau_cu_xanh.datasource.Datasource
-import com.nhom12.rau_cu_xanh.helper.onItemClick
+import com.nhom12.rau_cu_xanh.helper.RecyclerItemClickListenr
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.product_item.view.*
 import kotlinx.coroutines.Dispatchers
@@ -74,13 +74,17 @@ class HomeFragment : Fragment() {
         // cho vào adapter
         recyclerviewHome.adapter = ProductAdapter(productList)
         // Khi click vào 1 item
-        recyclerviewHome.onItemClick { recyclerView, position, v ->
-            v.card_layout.setOnClickListener{
-                Toast.makeText(context, position.toString(), Toast.LENGTH_SHORT).show()
-                selected_RauCu_ID = position + 1
-                view?.let { it1 -> Navigation.findNavController(it1).navigate(R.id.action_navigation_home_to_chiTietSanPhamFragment) }
+        recyclerviewHome.addOnItemTouchListener(RecyclerItemClickListenr(requireActivity(), recyclerviewHome, object : RecyclerItemClickListenr.OnItemClickListener {
+            override fun onItemClick(view: View, position: Int) {
+                view.card.setOnClickListener {
+                    Toast.makeText(context,position.toString(),Toast.LENGTH_SHORT).show()
+                }
             }
-        }
+
+            override fun onItemLongClick(view: View?, position: Int) {
+                TODO("Not yet implemented")
+            }
+        }))
     }
 
 
