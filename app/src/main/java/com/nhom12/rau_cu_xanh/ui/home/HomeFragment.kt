@@ -81,11 +81,11 @@ class HomeFragment : Fragment() {
                 val listResult = ProductApi.retrofitService.getProduct()
                 Toast.makeText(
                     activity,
-                    "Success: ${listResult.size} Mars photos retrieved",
+                    "Success: ${listResult.size} items retrieved",
                     Toast.LENGTH_SHORT
                 ).show()
-                tenQuaOt.setText(listResult[1].Name)
-                giaQuaOt.setText(listResult[1].Price.toString() + " VNĐ")
+                tenQuaOt.text = listResult[1].Name
+                giaQuaOt.text = listResult[1].Price.toString() + " VNĐ"
             } catch (e: Exception) {
                 Toast.makeText(activity, "Failure: ${e.message}", Toast.LENGTH_SHORT)
                     .show()

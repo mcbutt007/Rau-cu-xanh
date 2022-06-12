@@ -72,5 +72,6 @@ class MainActivity : AppCompatActivity() {
                 doubleBackToExitPressedOnce = false
             }, 2000)
         }
+        super.onBackPressed()
     }
 }

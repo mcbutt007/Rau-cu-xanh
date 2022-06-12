@@ -14,11 +14,9 @@ class LaunchScreen : AppCompatActivity() {
         val userid = sharedPref.getInt("UserID",0)
         if (!rememberLogin) {
             val intent = Intent(this, LoginActivity::class.java)
-            Toast.makeText(this,userid.toString(),Toast.LENGTH_LONG).show()
             startActivity(intent)
         } else {
             val intent = Intent(this, MainActivity::class.java)
-            Toast.makeText(this,userid.toString(),Toast.LENGTH_LONG).show()
             startActivity(intent)
         }
         finish()
