@@ -2,6 +2,7 @@ package com.nhom12.rau_cu_xanh.ui.home
 
 import android.os.Bundle
 import android.os.Handler
+import android.provider.SyncStateContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,8 @@ import com.nhom12.rau_cu_xanh.adapter.ProductAdapter
 import com.nhom12.rau_cu_xanh.databinding.FragmentHomeBinding
 import com.nhom12.rau_cu_xanh.datasource.Datasource
 import com.nhom12.rau_cu_xanh.helper.RecyclerItemClickListenr
+import com.nhom12.rau_cu_xanh.network.getSelected_RauCu_ID
+import com.nhom12.rau_cu_xanh.network.setSelected_RauCu_ID
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.product_item.view.*
 import kotlinx.coroutines.Dispatchers
@@ -26,7 +29,6 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    var selected_RauCu_ID : Int = 0
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -80,13 +82,15 @@ class HomeFragment : Fragment() {
         recyclerviewHome.addOnItemTouchListener(RecyclerItemClickListenr(requireActivity(), recyclerviewHome, object : RecyclerItemClickListenr.OnItemClickListener {
             override fun onItemClick(view: View, position: Int) {
                 view.card.setOnClickListener {
-                    Toast.makeText(context,position.toString(),Toast.LENGTH_SHORT).show()
+                    setSelected_RauCu_ID(position+1)
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_home_to_chiTietSanPhamFragment)
                 }
             }
 
             override fun onItemLongClick(view: View?, position: Int) {
                 view?.card?.setOnClickListener {
-                    Toast.makeText(context,position.toString(),Toast.LENGTH_SHORT).show()
+                    setSelected_RauCu_ID(position+1)
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_home_to_chiTietSanPhamFragment)
                 }
             }
         }))

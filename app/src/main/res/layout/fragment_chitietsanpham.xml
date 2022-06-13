@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_marginBottom="56dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -24,11 +25,12 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/hinhsanpham"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
                     android:layout_margin="5dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/chilli_pepper" />
+                    tools:src="@drawable/chilli_pepper" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -38,6 +40,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/ten"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -46,6 +49,7 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/gia"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -58,6 +62,7 @@
                         android:id="@+id/cua_hang"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:clickable="true"
                         android:focusable="true"
                         android:minHeight="48dp"
@@ -69,7 +74,7 @@
             <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
+                android:layout_height="50dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0px"
@@ -80,7 +85,7 @@
                 <Button
                     android:id="@+id/them_gio_hang"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#BAE91E63"
                     android:text="Thêm vào giỏ hàng" />
@@ -88,7 +93,7 @@
                 <Button
                     android:id="@+id/mua_ngay"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Mua ngay" />
             </LinearLayout>
@@ -131,11 +136,11 @@
                         android:textSize="20dp" />
 
                     <TextView
-                        android:id="@+id/textView26"
+                        android:id="@+id/description"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
-                        android:text="        Với vị cay nồng, thơm, kích thích vị giác của người ăn, ớt là một trong những gia vị không thể thiếu trong nấu ăn cũng như mâm cơm của người Việt. Ớt hiểm của Bách Hóa Xanh luôn giữ được độ tươi mỗi ngày, được nuôi trồng theo quy trình nghiêm ngặt, bảo đảm các chỉ tiêu về an toàn và chất lượng." />
+                        tools:text="        Với vị cay nồng, thơm, kích thích vị giác của người ăn, ớt là một trong những gia vị không thể thiếu trong nấu ăn cũng như mâm cơm của người Việt. Ớt hiểm của Bách Hóa Xanh luôn giữ được độ tươi mỗi ngày, được nuôi trồng theo quy trình nghiêm ngặt, bảo đảm các chỉ tiêu về an toàn và chất lượng." />
                 </LinearLayout>
             </LinearLayout>
 
@@ -220,19 +225,13 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/yeu_thich"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="#BAE91E63"
                     android:text="Yêu thích" />
 
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Xem chi tiết >>" />
             </LinearLayout>
 
         </LinearLayout>

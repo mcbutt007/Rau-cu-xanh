@@ -4,14 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import com.bumptech.glide.Glide
 import com.nhom12.rau_cu_xanh.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.nhom12.rau_cu_xanh.network.*
 import kotlinx.android.synthetic.main.fragment_thanhtoan.*
 import kotlinx.android.synthetic.main.return_to_title.*
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class ThanhToanFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,8 +42,58 @@ class ThanhToanFragment : Fragment() {
         //Title text
         title_about_to?.setText(R.string.title_thanh_toan)
 
+        val sharedPref = this.activity?.getSharedPreferences("LoginStatus", AppCompatActivity.MODE_PRIVATE)
+        val userid = sharedPref!!.getString("UserID","0")
+
+        Toast.makeText(context,userid,Toast.LENGTH_SHORT)
+
         dat_hang.setOnClickListener{
-            Navigation.createNavigateOnClickListener(R.id.action_thanhToanFragment_to_chiTietHoaDonFragment)
+            MaterialAlertDialogBuilder(requireActivity())
+                .setTitle("Đặt hàng")
+                .setMessage("Bạn có muốn đặt hàng")
+
+                .setNegativeButton("Hủy") { dialog, which ->
+                    dialog.dismiss()
+                }
+                .setPositiveButton("Đồng ý") { dialog, which ->
+                    GlobalScope.launch (Dispatchers.Main) {
+                        if (userid != null) {
+                            LoginApi.retrofitService.muahang("1", getSelected_RauCu_ID().toString())
+                        }
+                    }
+                    Navigation.findNavController(view).navigate(R.id.action_thanhToanFragment_to_chiTietHoaDonFragment)
+                }
+                .show()
+            }
+
+        back_to_about.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_thanhToanFragment_to_chiTietSanPhamFragment))
+
+
+
+        getProductFrom()
+        }
+    @OptIn(DelicateCoroutinesApi::class)
+    private fun getProductFrom () {
+
+
+        GlobalScope.launch(Dispatchers.Main) {
+            try {
+
+                val result = ProductApi.retrofitService.getProductInfo(getSelected_RauCu_ID().toString())
+
+                tensp.text = result[0].Name
+                giasp.text = result[0].Price.toString() + " VNĐ"
+                giatien.text = result[0].Price.toString() + "Đ"
+                val imageURL : String = getBaseUrl() + "raucu/" + result[0].RauCu_ID.toString() + ".png"
+                Glide.with(requireActivity())
+                    .load(imageURL) // image url
+                    .centerCrop() // im
+                    .into(hinhsp);  // imageview object
+
+            } catch (e: Exception) {
+                Toast.makeText(activity, "Failure: ${e.message}", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
+    }
     }

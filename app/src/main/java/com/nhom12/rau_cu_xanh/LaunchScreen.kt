@@ -11,7 +11,7 @@ class LaunchScreen : AppCompatActivity() {
 
         val sharedPref = getSharedPreferences("LoginStatus", MODE_PRIVATE)
         val rememberLogin = sharedPref.getBoolean("RememberLogin",false)
-        val userid = sharedPref.getInt("UserID",0)
+        val userid = sharedPref.getString("UserID","0")
         if (!rememberLogin) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

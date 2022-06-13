@@ -65,12 +65,12 @@ class LoginFragment : Fragment() {
                 //server return corresponding user id
                 userid = LoginApi.retrofitService.sendLoginInfo(user.username,user.password)
                 // if id check
-                if (id >0) {
+                if (userid >0) {
 
                     val sharedPref : SharedPreferences =
                         activity?.getSharedPreferences("LoginStatus", MODE_PRIVATE) ?: return@launch
                     val editor = sharedPref.edit()
-                        editor.putInt("UserID", userid)
+                        editor.putString("UserID", userid.toString())
                         editor.putBoolean("RememberLogin", true)
                         editor.commit()
 

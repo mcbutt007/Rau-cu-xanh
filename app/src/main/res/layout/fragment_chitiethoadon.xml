@@ -57,12 +57,12 @@
                     android:textSize="30dp" />
 
                 <TextView
-                    android:id="@+id/textView24"
+                    android:id="@+id/giatiensp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:gravity="center"
-                    android:text="58.000Đ"
+                    tools:text="58.000Đ"
                     android:textColor="#F44336"
                     android:textSize="30dp" />
             </LinearLayout>
@@ -157,6 +157,12 @@
 
                 android:textColor="#3C3838"
                 android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK" />
         </LinearLayout>
     </ScrollView>
 

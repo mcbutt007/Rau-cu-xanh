@@ -16,12 +16,24 @@
 
 package com.nhom12.rau_cu_xanh.datasource
 
+import android.util.Log
+import android.widget.Toast
+import androidx.core.content.contentValuesOf
 import com.nhom12.rau_cu_xanh.model.Product
 import com.nhom12.rau_cu_xanh.network.ProductApi
+import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.coroutines.currentCoroutineContext
+import okhttp3.Dispatcher
+import kotlin.coroutines.coroutineContext
 
 
 class Datasource {
     suspend fun getProductList(): List<Product> {
-        return ProductApi.retrofitService.getProduct()
+        try {
+            return ProductApi.retrofitService.getProduct()
+        } catch (e :Exception) {
+            Log.d("Debug", "getProductList: $e")
+        }
+        return emptyList()
     }
 }

@@ -6,6 +6,7 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 
 private val BASE_URL = getBaseUrl()
@@ -29,6 +30,9 @@ interface ProductCallApi {
     // add params to url ex : http://192.168.1.35:5000/login?username=Teo&password=123
     @GET("home") //send GET request to server
     suspend fun getProduct() : List<Product>
+
+    @GET("raucuinfo/{product_id}") //send GET request to server
+    suspend fun getProductInfo(@Path("product_id") id: String) : List<Product>
 
 }
 

@@ -119,6 +119,9 @@
         <action
             android:id="@+id/action_chiTietHoaDonFragment_to_donHangFragment"
             app:destination="@id/donHangFragment" />
+        <action
+            android:id="@+id/action_chiTietHoaDonFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/khuyenMaiFragment"
@@ -169,5 +172,8 @@
         <action
             android:id="@+id/action_thanhToanFragment_to_chiTietHoaDonFragment"
             app:destination="@id/chiTietHoaDonFragment" />
+        <action
+            android:id="@+id/action_thanhToanFragment_to_chiTietSanPhamFragment"
+            app:destination="@id/chiTietSanPhamFragment" />
     </fragment>
 </navigation>

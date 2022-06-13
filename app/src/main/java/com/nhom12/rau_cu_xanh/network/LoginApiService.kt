@@ -38,6 +38,12 @@ interface LoginApiService {
         @Query("email") email : String,
         @Query("password") password : String
     ) : String
+
+    @POST("muahang")
+    suspend fun muahang(
+        @Query("userid") userid: String,
+        @Query("raucuid") raucuid: String
+    ) : String
 }
 
 object LoginApi {

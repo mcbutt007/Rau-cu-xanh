@@ -33,7 +33,7 @@ class ProductAdapter(val productList: List<Product>) :
                 .into(hinh);  // imageview object
             // đổ json vào view
             ten.text = product.Name
-            gia.text = product.Price.toString()
+            gia.text = product.Price.toString() + " VNĐ"
         }
     }
 
