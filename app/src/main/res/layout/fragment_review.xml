@@ -18,29 +18,68 @@
         android:text="Trải nghiệm của bạn khi mua hàng như thế nào ?"
         />
 
-    <ImageView
-        android:id="@+id/imageView2joj"
-        android:layout_width="match_parent"
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rate" />
+        android:numStars="5"
+        android:rating="3.5"
+        android:stepSize="0.5"
+        />
+
     <TextView
-        android:id="@+id/textViewioi3"
+        android:id="@+id/textView_ioi3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:textSize="30dp"
         android:textColor="@color/green_200"
         android:text="Bạn có hài lòng về sản phẩm không?"
         />
 
-    <ImageView
-        android:id="@+id/imageôiiView4"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rate1" />
+        android:layout_height="190dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_danhgia1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rất hài lòng"
+            android:textColor="#D11313"
+            android:backgroundTint="#11816868"/>
+
+
+        <Button
+            android:id="@+id/button_danhgia2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hài lòng"
+            android:textColor="#D11313"
+            android:backgroundTint="#11816868"/>
+
+        <Button
+            android:id="@+id/button_danhgia3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bình thường"
+            android:textColor="#D11313"
+            android:backgroundTint="#11816868"/>
+        <Button
+            android:id="@+id/button_danhgia4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tệ"
+            android:textColor="#D11313"
+            android:backgroundTint="#11816868"/>
+    </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editText_danhgia"
         android:layout_margin="5dp"
         android:layout_weight="1"
         android:layout_width="match_parent"
@@ -53,13 +92,10 @@
         android:textColor="#403838" />
 
     <Button
-        android:id="@+id/buttonfgfg"
+        android:id="@+id/button_guidanhgia"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Gửi đánh giá" />
+
 </LinearLayout>
-
-
-
-

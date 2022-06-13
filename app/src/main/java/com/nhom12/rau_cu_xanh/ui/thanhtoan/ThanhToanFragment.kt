@@ -1,5 +1,7 @@
 package com.nhom12.rau_cu_xanh.ui.thanhtoan
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -42,10 +44,9 @@ class ThanhToanFragment : Fragment() {
         //Title text
         title_about_to?.setText(R.string.title_thanh_toan)
 
-        val sharedPref = this.activity?.getSharedPreferences("LoginStatus", AppCompatActivity.MODE_PRIVATE)
-        val userid = sharedPref!!.getString("UserID","0")
-
-        Toast.makeText(context,userid,Toast.LENGTH_SHORT)
+        val sharedPref : SharedPreferences? =
+            activity?.getSharedPreferences("LoginStatus", Context.MODE_PRIVATE)
+        val userid = sharedPref?.getInt("UserID",0)
 
         dat_hang.setOnClickListener{
             MaterialAlertDialogBuilder(requireActivity())
@@ -58,10 +59,11 @@ class ThanhToanFragment : Fragment() {
                 .setPositiveButton("Đồng ý") { dialog, which ->
                     GlobalScope.launch (Dispatchers.Main) {
                         if (userid != null) {
-                            LoginApi.retrofitService.muahang("1", getSelected_RauCu_ID().toString())
+                            LoginApi.retrofitService.muahang(userid.toString(), getSelected_RauCu_ID().toString())
                         }
                     }
                     Navigation.findNavController(view).navigate(R.id.action_thanhToanFragment_to_chiTietHoaDonFragment)
+                    Toast.makeText(activity,"Đặt hàng thành công!",Toast.LENGTH_LONG).show()
                 }
                 .show()
             }
@@ -87,7 +89,7 @@ class ThanhToanFragment : Fragment() {
                 val imageURL : String = getBaseUrl() + "raucu/" + result[0].RauCu_ID.toString() + ".png"
                 Glide.with(requireActivity())
                     .load(imageURL) // image url
-                    .centerCrop() // im
+                    .centerCrop() // imageview Properties
                     .into(hinhsp);  // imageview object
 
             } catch (e: Exception) {

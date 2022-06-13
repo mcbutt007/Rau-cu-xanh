@@ -27,7 +27,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface ProductCallApi {
-    // add params to url ex : http://192.168.1.35:5000/login?username=Teo&password=123
+    // add params to url ex : http://192.168.1.35:5000/home
     @GET("home") //send GET request to server
     suspend fun getProduct() : List<Product>
 

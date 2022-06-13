@@ -1,6 +1,5 @@
 package com.nhom12.rau_cu_xanh.ui.login
 
-import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.content.SharedPreferences
@@ -12,7 +11,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.nhom12.rau_cu_xanh.LoginActivity
 import com.nhom12.rau_cu_xanh.MainActivity
 import com.nhom12.rau_cu_xanh.R
 import com.nhom12.rau_cu_xanh.databinding.FragmentLoginBinding
@@ -70,7 +68,7 @@ class LoginFragment : Fragment() {
                     val sharedPref : SharedPreferences =
                         activity?.getSharedPreferences("LoginStatus", MODE_PRIVATE) ?: return@launch
                     val editor = sharedPref.edit()
-                        editor.putString("UserID", userid.toString())
+                        editor.putInt("UserID", userid)
                         editor.putBoolean("RememberLogin", true)
                         editor.commit()
 

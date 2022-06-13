@@ -39,7 +39,7 @@ class ChiTietHoaDonFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Back button setup
-        back_to_about.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietHoaDonFragment_to_donHangFragment))
+        back_to_about.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_chiTietHoaDonFragment_to_navigation_home))
         //Title text
         title_about_to?.setText(R.string.title_chi_tiet_hoa_don)
 
