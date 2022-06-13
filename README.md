@@ -23,6 +23,9 @@ Thư mục layout : Chứa các màn hình giao diện
 - quên mật khẩu : email người dùng gửi sẽ đc thêm vào csdl bảng quên mật khẩu
 - Đăng ký : Thông tin đăng ký người dùng gửi sẽ đc thêm vào csdl
 
+### Phần mua hàng (dự kiến) :
+- Khi nhấn mua hàng, sẽ insert vào bảng RECIEPT và bảng RECIEPT_RAUCU_LIST (chứa id các sản phẩm có trong hóa đơn và số lượng) 
+
 		Tiến độ app:
 - Đăng nhập flow : Hoàn thành
 - Thay đổi thông tin người dùng : Dự kiến xong 14/5/2022(Phúc)
