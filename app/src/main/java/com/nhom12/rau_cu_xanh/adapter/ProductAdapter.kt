@@ -12,6 +12,7 @@ import com.nhom12.rau_cu_xanh.model.Product
 import com.nhom12.rau_cu_xanh.network.getBaseUrl
 import kotlin.coroutines.coroutineContext
 
+// Adapter cho recyclerview ở home
 // Đọc ở đây trước để hiểu : https://developer.android.com/guide/topics/ui/layout/recyclerview
 
 class ProductAdapter(val productList: List<Product>) :

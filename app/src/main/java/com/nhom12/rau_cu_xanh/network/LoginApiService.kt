@@ -1,5 +1,7 @@
 package com.nhom12.rau_cu_xanh.network
 
+//Phục vụ login
+
 import android.database.Observable
 import android.provider.SyncStateContract
 import okhttp3.ResponseBody
@@ -17,6 +19,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 interface LoginApiService {
 
+    // Chỉ cần chú ý những thứ trong interface này
 
     // add params to url ex : http://192.168.1.35:5000/login?username=Teo&password=123
     @POST("login") //send POST request to server
@@ -39,6 +42,8 @@ interface LoginApiService {
         @Query("password") password : String
     ) : String
 
+
+    // mua hàng, insert vào bảng RECIEPT
     @POST("muahang")
     suspend fun muahang(
         @Query("userid") userid: String,

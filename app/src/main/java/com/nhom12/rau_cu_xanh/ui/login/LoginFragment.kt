@@ -60,11 +60,12 @@ class LoginFragment : Fragment() {
         val user = User(username.text.toString(), password.text.toString())
         GlobalScope .launch(Dispatchers.Main) {
             try {
-                //server return corresponding user id
+                //server sẽ trả về id người dùng, nếu = 0 thì sai tk hoặc mk
                 userid = LoginApi.retrofitService.sendLoginInfo(user.username,user.password)
                 // if id check
                 if (userid >0) {
 
+                    // SharedPreferences để lưu userid sau khi đăng nhập và trạng thái tự động đăng nhập (RememberLogin)
                     val sharedPref : SharedPreferences =
                         activity?.getSharedPreferences("LoginStatus", MODE_PRIVATE) ?: return@launch
                     val editor = sharedPref.edit()
@@ -73,6 +74,7 @@ class LoginFragment : Fragment() {
                         editor.commit()
 
                     switchToMainActivities()
+
                 } else { //id = 0 : User not found in database
                     Toast.makeText(
                         activity?.applicationContext,

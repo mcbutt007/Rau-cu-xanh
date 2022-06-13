@@ -55,14 +55,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Click 2 lần để thoát ứng dụng
     override fun onBackPressed() {
+        // Chỉ thực hiện đối với fragment home
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         if (navController.currentDestination?.id?.equals(R.id.navigation_home) == true) {
+            // Code thực hiện
             if (doubleBackToExitPressedOnce) {
                 super.onBackPressed()
                 finishAndRemoveTask()
             }
-
             doubleBackToExitPressedOnce = true
             Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
 

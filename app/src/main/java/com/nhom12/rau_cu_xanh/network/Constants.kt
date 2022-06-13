@@ -5,6 +5,7 @@ private val BASE_URL =
 fun getBaseUrl(): String {
     return BASE_URL
 }
+// Lưu lại id của sản phẩm vừa được click vào trong recyclerview
 private var selected_RauCu_ID : Int = 0
 fun setSelected_RauCu_ID(value :Int) {
     selected_RauCu_ID = value

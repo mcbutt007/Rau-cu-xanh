@@ -1,5 +1,7 @@
 package com.nhom12.rau_cu_xanh.helper
 
+//Đây là class copy trên mạng xuống để làm cho item trong recyclerview click được
+
 import android.content.Context
 import android.view.GestureDetector
 import android.view.MotionEvent

@@ -44,6 +44,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        // Sử dụng GlobalScope.launch (Dispatchers.Main) { <Hàm cần gọi liên quan đến gọi api> }
+        // nếu không sẽ bị lỗi
+
+
         // Đổ dữ liệu vào recyclerview
         GlobalScope.launch (Dispatchers.Main) { FillRecyclerView() }
 
@@ -71,6 +75,7 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    // Đổ dữ liệu vào recyclerview
     private suspend fun FillRecyclerView() {
         val productList = Datasource().getProductList()
 
@@ -78,7 +83,8 @@ class HomeFragment : Fragment() {
         recyclerviewHome.layoutManager = GridLayoutManager(context, 2)
         // cho vào adapter
         recyclerviewHome.adapter = ProductAdapter(productList)
-        // Khi click vào 1 item, chỉ quan tâm đến hàm onItemClick
+
+        // Khi click vào 1 item, nghe sự kiện click ngắn click dài
         recyclerviewHome.addOnItemTouchListener(RecyclerItemClickListenr(requireActivity(), recyclerviewHome, object : RecyclerItemClickListenr.OnItemClickListener {
             override fun onItemClick(view: View, position: Int) {
                 view.card.setOnClickListener {
